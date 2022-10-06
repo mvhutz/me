@@ -1,0 +1,377 @@
+/*---- Base ------------------------------------------------------------------*/
+
+:root {
+  font-family: sans-serif;
+  --timing: cubic-bezier(.2,1,0,1);
+  --enter: 2s var(--timing) 0.2s backwards;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: 1vw;
+  background: black;
+}
+
+@media print {
+  html {
+    font-size: 0.7rem;
+  }
+}
+
+/*---- Generic Styles --------------------------------------------------------*/
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.15em;
+}
+
+h5 {
+  font-size: 0.75em;
+}
+
+ul {
+  padding-inline-start: 2em;
+  margin: 0.5em 0;
+  list-style-type: '—  ';
+}
+
+/*---- Navbar ----------------------------------------------------------------*/
+
+.navbar {
+  position: fixed;
+  height: 18em;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.navbar {
+  top: 0;
+}
+
+.resume-header {
+  color: white;
+  filter: opacity(0.5);
+  font: bold 8em 'Poppins';
+  animation: var(--enter) title-enter;
+  will-change: transform, filter;
+  user-select: none;
+}
+
+footer.navbar {
+  bottom: 0;
+}
+
+.resume-footer {
+  font: bold 8em monospace;
+  animation: var(--enter) footer-enter;
+  will-change: transform, filter;
+  user-select: none;
+}
+
+.footer-icon {
+  text-decoration: none;
+}
+
+.footer-img {
+  display: inline-block;
+  font-size: 0.75em;
+  user-select: none;
+  filter: brightness(0) invert(1);
+
+  transform: scale(1);
+  opacity: 0.5;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.footer-img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/*---- Page ------------------------------------------------------------------*/
+
+article {
+  background: whitesmoke;
+  border: 2px solid gainsboro;
+  padding: 3em;
+  margin: 18em 16em;
+  border-radius: 1em;
+  animation: var(--enter) page-enter, var(--enter) scroll-enter;
+  will-change: transform, filter;
+  box-shadow: 0 2.5em 5em 0 #0004,
+              inset 1.5em 1.5em 5em 2.5em white;
+}
+
+body::before {
+  background: lightsteelblue linear-gradient(45deg, #F008, #00F8);
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  animation: var(--enter) gradient-enter;
+}
+
+/*---- Header ----------------------------------------------------------------*/
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  margin-top: 1em;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.email {
+  color: dodgerblue;
+}
+
+.phone {
+  color: orangered;
+}
+
+.location {
+  color: green;
+}
+
+/*---- Sectioning ------------------------------------------------------------*/
+
+.topic-title {
+  padding-bottom: 3px;
+  border-bottom: 2px solid cornflowerblue;
+  display: block;
+}
+
+.topic {
+  margin-top: 2em;
+  page-break-inside: avoid;
+}
+
+/*---- Experience Title ------------------------------------------------------*/
+
+.experience {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  font-weight: bold;
+  font-family: Verdana;
+  color: steelblue;
+}
+
+.title > i {
+  font-weight: normal;
+  color: black;
+}
+
+.date {
+  font-style: italic;
+}
+
+.place {
+  font-weight: normal;
+  display: block;
+  color: dimgray;
+  text-transform: uppercase;
+}
+
+/*---- Skill List ------------------------------------------------------------*/
+
+.skill-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.skill-list > li {
+  border: 1px solid gainsboro;
+  display: inline-flex;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  color: steelblue;
+  background: whitesmoke;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  align-items: center;
+  font-weight: bold;
+  user-select: none;
+  margin: 0.5em;
+  box-shadow: 0 0.25em 0.25em 0 #0004,
+              inset 0.15em 0.15em 0.5em 0.25em white;
+  transform: scale(1);
+  transition: transform var(--timing) 1s;
+}
+
+.skill-list > li img {
+  height: 1.5em;
+}
+
+.skill-list > li:hover {
+  transform: scale(1.1);
+}
+
+/*---- Classes List ----------------------------------------------------------*/
+
+.classes-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.classes-list > li::before {
+  content: '—  ';
+}
+
+.classes-list > li {
+  width: calc(50% - 3ch);
+  display: inline-block;
+}
+
+/*---- Miscellaneous ---------------------------------------------------------*/
+
+.hflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 0.5em;
+  user-select: none;
+  display: inline-block;
+}
+
+.freshmanuals {
+  color: steelblue;
+}
+
+/*---- Animations ------------------------------------------------------------*/
+
+@keyframes page-enter {
+  0% {
+    filter: opacity(0);
+    transform: scale(1.5) translate3d(0, 50%, 0);
+  }
+
+  99% {
+    filter: opacity(1);
+    transform: scale(1) translate3d(0, 0%, 0);
+  }
+
+  100% {
+    filter: opacity(1);
+    transform: scale(1) translate3d(0, 0%, 0);
+  }
+}
+
+@keyframes gradient-enter {
+  0% {
+    filter: opacity(0);
+  }
+  
+  100% {
+    filter: opacity(1);
+  }
+}
+
+@keyframes title-enter {
+  0% {
+    filter: opacity(0);
+    transform: scale(2) translate3d(0, -200%, 0);
+  }
+
+  100% {
+    filter: opacity(0.5);
+    transform: scale(1) translate3d(0, 0%, 0);
+  }
+}
+
+@keyframes footer-enter {
+  0% {
+    filter: opacity(0);
+    transform: scale(2) translate3d(0, 1000%, 0);
+  }
+
+  100% {
+    filter: opacity(1);
+    transform: scale(1) translate3d(0, 0%, 0);
+  }
+}
+
+@keyframes scroll-enter {
+  0% {
+    position: fixed;
+  }
+
+  25% {
+    position: fixed;
+  }
+
+  100% {
+    position: static;
+  }
+}
+
+/*---- Print Styles ----------------------------------------------------------*/
+
+@media print {
+  article {
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    background: white;
+    box-shadow: none;
+  }
+
+  main {
+    overflow: auto;
+    height: auto;
+    background: white;
+    box-shadow: none;
+  }
+
+  html, body {
+    overflow: auto;
+    background: white;
+    height: auto;
+  }
+
+  .skill-list > li {
+    box-shadow: none;
+    background-color: white;
+  }
+
+  article * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
