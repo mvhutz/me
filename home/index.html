@@ -11,51 +11,51 @@
   </head>
   <body>
    <nav>
-      <menu class="navbar nav1">
-        <a href="#" class="button" id="homebutton" data-i="home">Max's&nbsp;Place</a>
+      <header class="navbar nav1">
+        <a href="#" class="button" data-i="home">Max's&nbsp;Place</a>
         <div class="flex-space"></div>
         <a href="/about" class="red icon button" data-i="accessibility_new">About</a>
         <a href="/projects" class="yellow icon button" data-i="design_services">Projects</a>
         <a href="/resume" class="green icon button" data-i="draft">Resume</a>
         <a href="/contact" class="blue icon button" data-i="push_pin">Contact</a>
-      </menu>
-      <menu class="navbar nav2">
-        <a href="#" class="button" id="homebutton" data-i="home">Max's&nbsp;Place</a>
+      </header>
+      <header class="navbar nav2">
+        <a href="#" class="button" data-i="home">Max's&nbsp;Place</a>
         <div class="flex-space"></div>
         <a href="/about" class="red icon button" data-i="accessibility_new"></a>
         <a href="/projects" class="yellow icon button" data-i="design_services"></a>
         <a href="/resume" class="green icon button" data-i="draft"></a>
         <a href="/contact" class="blue icon button" data-i="push_pin"></a>
-      </menu>
-      <menu class="navbar nav3">
-        <a href="#" class="button" id="homebutton" data-i="home">Max's&nbsp;Place</a>
+      </header>
+      <header class="navbar nav3">
+        <a href="#" class="button" data-i="home">Max's&nbsp;Place</a>
         <div class="flex-space"></div>
-        <button class="icon button" data-i="menu" onclick="openMenu()"></a>
-      </menu>
+        <button class="icon button" data-i="menu" onclick="openMenu()"></button>
+      </header>
       <div id="title-page">
         <img src="/res/avatar.svg" alt="Avatar" id="avatar">
         <div id="title-bottom">
           <div id="title-name">MAX HUTZ</div>
-          <div class="fade-text fade1" data="MAX HUTZ"></div>
-          <div class="fade-text fade2" data="MAX HUTZ"></div>
-          <div class="fade-text fade3" data="MAX HUTZ"></div>
-          <div class="fade-text fade4" data="MAX HUTZ"></div>
-          <div class="fade-text fade5" data="MAX HUTZ"></div>
+          <div class="fade-text fade1" data-t="MAX HUTZ"></div>
+          <div class="fade-text fade2" data-t="MAX HUTZ"></div>
+          <div class="fade-text fade3" data-t="MAX HUTZ"></div>
+          <div class="fade-text fade4" data-t="MAX HUTZ"></div>
+          <div class="fade-text fade5" data-t="MAX HUTZ"></div>
         </div>
       </div>
     </nav>
-    <section id="title-section"></section>
+    <article id="title-section"></article>
+
+    <dialog id="menu-modal">
+      <div id="menu-inner">
+        <a href="#" class="button" data-i="home" onclick="closeMenu()">Max's&nbsp;Place</a>
+        <div class="flex-space"></div>
+        <a href="/about" class="red icon button" data-i="accessibility_new" onclick="closeMenu()">About</a>
+        <a href="/projects" class="yellow icon button" data-i="design_services" onclick="closeMenu()">Projects</a>
+        <a href="/resume" class="green icon button" data-i="draft" onclick="closeMenu()">Resume</a>
+        <a href="/contact" class="blue icon button" data-i="push_pin" onclick="closeMenu()">Contact</a>
+        <div class="flex-space"></div>
+      </div>
+    </dialog>
   </body>
 </html>
-
-<dialog id="menu-modal">
-  <div id="menu-inner">
-    <a href="#" class="button" id="homebutton" data-i="home" onclick="closeMenu()">Max's&nbsp;Place</a>
-    <div class="flex-space"></div>
-    <a href="/about" class="red icon button" data-i="accessibility_new" onclick="closeMenu()">About</a>
-    <a href="/projects" class="yellow icon button" data-i="design_services" onclick="closeMenu()">Projects</a>
-    <a href="/resume" class="green icon button" data-i="draft" onclick="closeMenu()">Resume</a>
-    <a href="/contact" class="blue icon button" data-i="push_pin" onclick="closeMenu()">Contact</a>
-    <div class="flex-space"></div>
-  </div>
-</dialog>

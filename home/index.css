@@ -122,7 +122,7 @@ nav {
 }
 
 .fade-text::before {
-  content: attr(data) " " attr(data) " " attr(data) " " attr(data) " " attr(data) " " attr(data) " " attr(data);
+  content: attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t);
   font-size: calc(min(12vh, 16vw));
   line-height: calc(min(11vh, 14vw));
   font-family: "Open Sans", sans-serif;
@@ -249,7 +249,7 @@ nav a:nth-child(7) { animation: nav-enter 2s 600ms var(--timing) backwards; }
 
 /*----------------------------------------------------------------------------*/
 
-section {
+article {
   margin-bottom: 200vh;
   background-color: var(--color, transparent);
 }
