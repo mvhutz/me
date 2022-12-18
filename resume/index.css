@@ -4,6 +4,14 @@
   font-family: sans-serif;
   --timing: cubic-bezier(.2,1,0,1);
   --enter: 2s var(--timing) 0.2s backwards;
+  
+  --blue: #3F75A2;
+  --darkblue: #2E5476;
+  --grey: #575757;
+
+  --link-r: #D13800;
+  --link-g: #006B00;
+  --link-b: #006EDB;
 }
 
 * {
@@ -71,7 +79,7 @@ nav.navbar {
 .resume-header {
   color: white;
   filter: opacity(0.5);
-  font: bold 8em 'Poppins';
+  font: bold 8em Poppins;
   animation: var(--enter) title-enter;
   will-change: transform, filter;
   user-select: none;
@@ -90,20 +98,27 @@ footer.navbar {
 
 .footer-icon {
   text-decoration: none;
+  opacity: 0.5;
+  color: white;
+  font-size: 0.2em;
+  font-family: Verdana;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .footer-img {
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 4em !important;
   user-select: none;
   filter: brightness(0) invert(1);
 
   transform: scale(1);
-  opacity: 0.5;
-  transition: transform 0.3s, opacity 0.3s;
 }
 
-.footer-img:hover {
+.footer-icon:hover {
   transform: scale(1.1);
   opacity: 1;
 }
@@ -141,6 +156,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   font-style: normal;
+  font-weight: bold;
   margin-top: 1em;
 }
 
@@ -151,15 +167,15 @@ body::before {
 }
 
 .email {
-  color: dodgerblue;
+  color: var(--link-b);
 }
 
 .phone {
-  color: orangered;
+  color: var(--link-r);
 }
 
 .location {
-  color: green;
+  color: var(--link-g);
 }
 
 /*---- Sectioning ------------------------------------------------------------*/
@@ -185,12 +201,11 @@ body::before {
 .title {
   font-weight: bold;
   font-family: Verdana;
-  color: steelblue;
+  color: var(--blue);
 }
 
 .title > i {
   font-weight: normal;
-  color: black;
 }
 
 .date {
@@ -200,7 +215,7 @@ body::before {
 .place {
   font-weight: normal;
   display: block;
-  color: dimgray;
+  color: var(--grey);
   text-transform: uppercase;
 }
 
@@ -216,7 +231,7 @@ body::before {
   display: inline-flex;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  color: steelblue;
+  color: var(--blue);
   background: whitesmoke;
   font-family: monospace;
   white-space: nowrap;
@@ -270,7 +285,7 @@ body::before {
 }
 
 .freshmanuals {
-  color: steelblue;
+  color: var(--darkblue);
 }
 
 /*---- Animations ------------------------------------------------------------*/
