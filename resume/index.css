@@ -4,6 +4,7 @@
   font-family: sans-serif;
   --timing: cubic-bezier(.2,1,0,1);
   --enter: 2s var(--timing) 0.2s backwards;
+  --steelblue: #385757;
 }
 
 * {
@@ -90,20 +91,27 @@ footer.navbar {
 
 .footer-icon {
   text-decoration: none;
+  opacity: 0.5;
+  color: white;
+  font-size: 0.2em;
+  font-family: Verdana;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .footer-img {
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 4em !important;
   user-select: none;
   filter: brightness(0) invert(1);
 
   transform: scale(1);
-  opacity: 0.5;
-  transition: transform 0.3s, opacity 0.3s;
 }
 
-.footer-img:hover {
+.footer-icon:hover {
   transform: scale(1.1);
   opacity: 1;
 }
@@ -151,15 +159,15 @@ body::before {
 }
 
 .email {
-  color: dodgerblue;
+  /* color: dodgerblue; */
 }
 
 .phone {
-  color: orangered;
+  /* color: orangered; */
 }
 
 .location {
-  color: green;
+  /* color: green; */
 }
 
 /*---- Sectioning ------------------------------------------------------------*/
@@ -185,12 +193,12 @@ body::before {
 .title {
   font-weight: bold;
   font-family: Verdana;
-  color: steelblue;
+  /* color: var(--steelblue); */
 }
 
 .title > i {
   font-weight: normal;
-  color: black;
+  /* color: black; */
 }
 
 .date {
@@ -200,7 +208,7 @@ body::before {
 .place {
   font-weight: normal;
   display: block;
-  color: dimgray;
+  /* color: dimgray; */
   text-transform: uppercase;
 }
 
@@ -216,7 +224,7 @@ body::before {
   display: inline-flex;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  color: steelblue;
+  /* color: black; */
   background: whitesmoke;
   font-family: monospace;
   white-space: nowrap;
@@ -270,7 +278,7 @@ body::before {
 }
 
 .freshmanuals {
-  color: steelblue;
+  /* color: var(--steelblue); */
 }
 
 /*---- Animations ------------------------------------------------------------*/
