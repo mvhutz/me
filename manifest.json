@@ -1,0 +1,14 @@
+{
+  "start_url": "/",
+  "name": "Max's Personal Website",
+  "short_name": "Max's Place",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      "src": "/res/favicon.ico",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    }
+  ]
+}
