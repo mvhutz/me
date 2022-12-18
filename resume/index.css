@@ -4,7 +4,14 @@
   font-family: sans-serif;
   --timing: cubic-bezier(.2,1,0,1);
   --enter: 2s var(--timing) 0.2s backwards;
-  --steelblue: #385757;
+  
+  --blue: #3F75A2;
+  --darkblue: #2E5476;
+  --grey: #575757;
+
+  --link-r: #D13800;
+  --link-g: #006B00;
+  --link-b: #006EDB;
 }
 
 * {
@@ -72,7 +79,7 @@ nav.navbar {
 .resume-header {
   color: white;
   filter: opacity(0.5);
-  font: bold 8em 'Poppins';
+  font: bold 8em Poppins;
   animation: var(--enter) title-enter;
   will-change: transform, filter;
   user-select: none;
@@ -149,6 +156,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   font-style: normal;
+  font-weight: bold;
   margin-top: 1em;
 }
 
@@ -159,15 +167,15 @@ body::before {
 }
 
 .email {
-  /* color: dodgerblue; */
+  color: var(--link-b);
 }
 
 .phone {
-  /* color: orangered; */
+  color: var(--link-r);
 }
 
 .location {
-  /* color: green; */
+  color: var(--link-g);
 }
 
 /*---- Sectioning ------------------------------------------------------------*/
@@ -193,12 +201,11 @@ body::before {
 .title {
   font-weight: bold;
   font-family: Verdana;
-  /* color: var(--steelblue); */
+  color: var(--blue);
 }
 
 .title > i {
   font-weight: normal;
-  /* color: black; */
 }
 
 .date {
@@ -208,7 +215,7 @@ body::before {
 .place {
   font-weight: normal;
   display: block;
-  /* color: dimgray; */
+  color: var(--grey);
   text-transform: uppercase;
 }
 
@@ -224,7 +231,7 @@ body::before {
   display: inline-flex;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  /* color: black; */
+  color: var(--blue);
   background: whitesmoke;
   font-family: monospace;
   white-space: nowrap;
@@ -278,7 +285,7 @@ body::before {
 }
 
 .freshmanuals {
-  /* color: var(--steelblue); */
+  color: var(--darkblue);
 }
 
 /*---- Animations ------------------------------------------------------------*/
