@@ -82,6 +82,7 @@ nav.navbar {
 }
 
 .resume-header {
+  position: absolute;
   color: white;
   filter: opacity(0.5);
   font: 800 8em Poppins;
@@ -122,7 +123,8 @@ footer.navbar {
   font-size: 4em !important;
   user-select: none;
   filter: brightness(0) invert(1);
-
+  width: 1em;
+  height: 1.2em;
   transform: scale(1);
 }
 
@@ -196,6 +198,12 @@ body::before {
 .topic {
   margin-top: 2em;
   page-break-inside: avoid;
+}
+
+.topic-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
 }
 
 /*---- Experience Title ------------------------------------------------------*/
@@ -287,6 +295,8 @@ body::before {
 
 .icon {
   margin-right: 0.5em;
+  width: 1em;
+  height: 1em;
   user-select: none;
   display: inline-block;
 }
