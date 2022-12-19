@@ -3,7 +3,7 @@
 :root {
   font-family: sans-serif;
   --timing: cubic-bezier(.2,1,0,1);
-  --enter: 2s var(--timing) 0.2s backwards;
+  --enter: 2s var(--timing) 0.2s both;
   
   --blue: #3F75A2;
   --darkblue: #2E5476;
@@ -23,12 +23,17 @@
 html {
   font-size: 1vw;
   background: black;
+  animation: var(--enter) scene-enter;
 }
 
 @media print {
   html {
     font-size: 0.7rem;
   }
+}
+
+main {
+  display: contents;
 }
 
 /*---- Generic Styles --------------------------------------------------------*/
@@ -79,7 +84,7 @@ nav.navbar {
 .resume-header {
   color: white;
   filter: opacity(0.5);
-  font: bold 8em Poppins;
+  font: 800 8em Poppins;
   animation: var(--enter) title-enter;
   will-change: transform, filter;
   user-select: none;
@@ -131,7 +136,7 @@ article {
   padding: 3em;
   margin: 18em 16em;
   border-radius: 1em;
-  animation: var(--enter) page-enter, var(--enter) scroll-enter;
+  animation: page-enter var(--enter);
   will-change: transform, filter;
   box-shadow: 0 2.5em 5em 0 #0004,
               inset 1.5em 1.5em 5em 2.5em white;
@@ -147,7 +152,6 @@ body::before {
   top: 0;
   left: 0;
   z-index: -2;
-  animation: var(--enter) gradient-enter;
 }
 
 /*---- Header ----------------------------------------------------------------*/
@@ -291,67 +295,42 @@ body::before {
 /*---- Animations ------------------------------------------------------------*/
 
 @keyframes page-enter {
-  0% {
-    filter: opacity(0);
-    transform: scale(1.5) translate3d(0, 50%, 0);
+  from {
+    transform: scale(0.9) translateY(10%);
   }
 
-  99% {
-    filter: opacity(1);
-    transform: scale(1) translate3d(0, 0%, 0);
-  }
-
-  100% {
-    filter: opacity(1);
-    transform: scale(1) translate3d(0, 0%, 0);
-  }
-}
-
-@keyframes gradient-enter {
-  0% {
-    filter: opacity(0);
-  }
-  
-  100% {
-    filter: opacity(1);
+  to {
+    transform: scale(1) translateY(0%);
   }
 }
 
 @keyframes title-enter {
   0% {
-    filter: opacity(0);
-    transform: scale(2) translate3d(0, -200%, 0);
+    transform: scale(2) translateY(-50%);
   }
 
   100% {
-    filter: opacity(0.5);
-    transform: scale(1) translate3d(0, 0%, 0);
+    transform: scale(1) translateY(0%);
   }
 }
 
 @keyframes footer-enter {
   0% {
-    filter: opacity(0);
-    transform: scale(2) translate3d(0, 1000%, 0);
+    transform: scale(2) translateY(50%);
   }
 
   100% {
-    filter: opacity(1);
-    transform: scale(1) translate3d(0, 0%, 0);
+    transform: scale(1) translateY(0%);
   }
 }
 
-@keyframes scroll-enter {
-  0% {
-    position: fixed;
+@keyframes scene-enter {
+  from {
+    filter: brightness(0);
   }
-
-  25% {
-    position: fixed;
-  }
-
-  100% {
-    position: static;
+  
+  to {
+    filter: brightness(1);
   }
 }
 
