@@ -99,6 +99,9 @@ footer.navbar {
   animation: var(--enter) footer-enter;
   will-change: transform, filter;
   user-select: none;
+  display: flex;
+  justify-content: space-between;
+  width: 3em;
 }
 
 .footer-icon {
