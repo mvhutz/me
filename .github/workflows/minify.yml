@@ -17,13 +17,13 @@ jobs:
         with:
           node-version: '16'
       - run: |
-        npm install -g terser csso-cli html-minifier
+          npm install -g terser csso-cli html-minifier
 
       # Use CLI tools to minify, overwriting existing files
       - run: |
-        for i in `find . -name "*.js" -type f`; terser $i --compress -o $i; done
-        for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
-        for i in `find . -name "*.html" -type f`; do html-minifier $i -o $i; done
+          for i in `find . -name "*.js" -type f`; terser $i --compress -o $i; done
+          for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
+          for i in `find . -name "*.html" -type f`; do html-minifier $i -o $i; done
       
       # Push changes to `build` branch
       - run: |
