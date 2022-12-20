@@ -26,15 +26,15 @@ jobs:
 
       - name: Minify files.
         run: |
-          for i in `find . -name "*.js" -type f`; do terser $i --compress -o $i; done
-          for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
-          for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
+          find . -name "*.js" -type f -exec terser {} -c -o {} \;
+          find . -name "*.css" -type f -exec csso {} -o {} \;
+          find . -name "*.html" -type f -exec html-minifier --remove-comments --collapse-whitespace {} -o {} \;
       
       - name: "Commiting changes."
         run: |
-          git config user.email "noreply@github.com"
-          git config user.name "github-actions"
+          git config user.name github-actions
+          git config user.email noreply@github.com
           git commit -am "Preparing changes for deployment."
   
       - name: "Pushing changes."
-        run: git push -f --set-upstream origin build
+        run: git push -uf origin build
