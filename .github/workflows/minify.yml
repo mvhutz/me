@@ -18,7 +18,6 @@ jobs:
         run: npm i -g terser csso-cli html-minifier
 
       - run: |
-          git branch -D -q temp
           git branch temp
           git checkout temp
 
