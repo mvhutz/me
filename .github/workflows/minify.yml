@@ -1,5 +1,4 @@
-# A Github Action that minifies html/css/js and pushes it to a new branch
-name: minify
+name: Prepare for deployment.
 
 on:
   push:
@@ -11,24 +10,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      # Install CLI tools
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm i -g terser csso-cli html-minifier
 
-      # Use CLI tools to minify, overwriting existing files
-      - run: for i in `find . -name "*.js" -type f`; do terser $i --compress -o $i; done
-      - run: for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
-      - run: for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
+      - name: Install dependencies.
+        run: npm i -g terser csso-cli html-minifier
+
+      - name: Minify files.
+        run: |
+          for i in `find . -name "*.js" -type f`; do terser $i --compress -o $i; done
+          for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
+          for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
       
-      # Push changes to `build` branch
-      - name: Create report file
-        run: date +%s > report.txt
-      
-      - name: Create Pull Request
+      - name: Create pull request.
         uses: peter-evans/create-pull-request@v4
         with:
+          commit-message: Minified HTML, CSS, JS. Prepared for production.
+          committer: github-actions
+          author: github-actions <github-actions@users.noreply.github.com>
+          title: Deploy changes from main branch.
+          body: Automated with [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action.
+          assignees: MajorDroolz
+          reviewers: MajorDroolz
           base: build
-          token: ${{ secrets.GITHUB_TOKEN }}
