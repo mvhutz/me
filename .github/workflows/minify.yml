@@ -27,8 +27,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Minified HTML, CSS, JS. Prepared for production.
-          committer: github_actions
-          author: github_actions <github_actions@users.noreply.github.com>
+          committer: github-actions  <github-actions@users.noreply.github.com>
+          author: github-actions <github-actions@users.noreply.github.com>
           title: Deploy changes from main branch.
           body: Automated with [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action.
           assignees: MajorDroolz
