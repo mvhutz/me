@@ -24,7 +24,7 @@ jobs:
       - name: Copy over changes.
         run: |
           git reset --hard HEAD^
-          git pull main:main
+          git pull origin main
 
       - name: Minify files.
         run: |
