@@ -21,7 +21,9 @@ jobs:
         run: npm i -g terser csso-cli html-minifier
 
       - name: Copy over changes.
-        run: git merge -s theirs main
+        run: |
+          git reset HEAD^
+          git pull main
 
       - name: Minify files.
         run: |
