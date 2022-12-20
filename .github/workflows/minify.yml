@@ -22,7 +22,7 @@ jobs:
 
       - name: Copy over changes.
         run: |
-          git reset HEAD^
+          git reset --hard HEAD^
           git pull main
 
       - name: Minify files.
