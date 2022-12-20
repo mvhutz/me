@@ -23,7 +23,6 @@ jobs:
 
       - name: Copy over changes.
         run: |
-          git branch -D build
           git branch build
           git checkout build
 
