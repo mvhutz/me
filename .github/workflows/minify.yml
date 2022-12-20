@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: main
-          fetch-depth: '3'
-      
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -21,10 +17,10 @@ jobs:
       - name: Install dependencies.
         run: npm i -g terser csso-cli html-minifier
 
-      - name: Copy over changes.
-        run: |
-          git branch build
-          git checkout build
+      - run: |
+          git branch -D -q temp
+          git branch temp
+          git checkout temp
 
       - name: Minify files.
         run: |
@@ -32,15 +28,4 @@ jobs:
           for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
           for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
       
-      - name: Create pull request.
-        uses: peter-evans/create-pull-request@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: Minified HTML, CSS, JS. Prepared for production.
-          committer: github-actions  <github-actions@users.noreply.github.com>
-          author: github-actions <github-actions@users.noreply.github.com>
-          title: Deploy changes from main branch.
-          body: Automated with [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action.
-          assignees: MajorDroolz
-          reviewers: MajorDroolz
-          branch: temp
+      - run: gh pr create --title "Pull request title" --body "Pull request body" --base "build"
