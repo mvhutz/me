@@ -16,8 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: |
-          npm i -g terser csso-cli html-minifier
+      - run: npm i -g terser csso-cli html-minifier
 
       # Use CLI tools to minify, overwriting existing files
       - run: for i in `find . -name "*.js" -type f`; do terser $i --compress -o $i; done
