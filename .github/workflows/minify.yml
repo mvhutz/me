@@ -23,9 +23,9 @@ jobs:
 
       - name: Copy over changes.
         run: |
-          git reset --hard HEAD^
-          git fetch origin main
-          git merge -Xtheirs
+          git branch -D build
+          git branch build
+          git checkout build
 
       - name: Minify files.
         run: |
