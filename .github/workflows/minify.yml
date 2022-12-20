@@ -12,6 +12,9 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secret.SECRET }}
+  
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -19,9 +22,7 @@ jobs:
       - name: Install dependencies.
         run: npm i -g terser csso-cli html-minifier
 
-      - run: |
-          git branch temp
-          git checkout temp
+      - run: git checkout -b build
 
       - name: Minify files.
         run: |
@@ -30,9 +31,7 @@ jobs:
           for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
       
       - run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config user.email "noreply@github.com"
+          git config user.name "github-actions"
           git commit -am "STUFF"
-      - run: |
-          git push -f --set-upstream origin temp 
-      - run: gh pr create --title "Pull request title" --body "Pull request body" --base "build"
+      - run: git push -f --set-upstream origin build
