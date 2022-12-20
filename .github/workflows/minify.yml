@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.KEY }}
       
       # Install CLI tools
       - uses: actions/setup-node@v3
@@ -25,7 +27,7 @@ jobs:
       - run: for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
       
       # Push changes to `build` branch
-      - run: git config user.name ${{github.actor}}
-      - run: git config user.email ${{github.actor}}@user.noreply.github.com
-      - run: git commit -am 'Automated minify of ${{github.sha}}'
+      - run: git config user.name ${{ github.actor }}
+      - run: git config user.email ${{ github.actor }}@user.noreply.github.com
+      - run: git commit -am 'Automated minify of ${{ github.sha }}'
       - run: git push --force -u origin main:build
