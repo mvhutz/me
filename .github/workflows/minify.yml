@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          token: ${{ github.token }}
       
       # Install CLI tools
       - uses: actions/setup-node@v3
