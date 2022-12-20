@@ -8,12 +8,11 @@ on:
 jobs:
   minify:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ github.token }}
+
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secret.SECRET }}
+          token: ${{ secrets.SECRET }}
   
       - uses: actions/setup-node@v3
         with:
