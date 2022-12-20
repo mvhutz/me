@@ -1,0 +1,40 @@
+name: Prepare changes for deployment.
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.SECRET }}
+  
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies.
+        run: npm i -g terser csso-cli html-minifier
+
+      - name: "Copying changes over to build."
+        run: git checkout -b build
+
+      - name: Minify files.
+        run: |
+          for i in `find . -name "*.js" -type f`; do terser $i --compress -o $i; done
+          for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
+          for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
+      
+      - name: "Commiting changes."
+        run: |
+          git config user.email "noreply@github.com"
+          git config user.name "github-actions"
+          git commit -am "Preparing changes for deployment."
+  
+      - name: "Pushing changes."
+        run: git push -f --set-upstream origin build
