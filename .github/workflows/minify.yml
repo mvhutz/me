@@ -10,12 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: build
+      
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
 
       - name: Install dependencies.
         run: npm i -g terser csso-cli html-minifier
+
+      - name: Copy over changes.
+        run: git merge -s theirs main
 
       - name: Minify files.
         run: |
@@ -35,4 +41,3 @@ jobs:
           assignees: MajorDroolz
           reviewers: MajorDroolz
           branch: temp
-          base: build
