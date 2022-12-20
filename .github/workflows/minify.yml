@@ -32,6 +32,5 @@ jobs:
           git config --global user.name "Your Name"
           git commit -am "STUFF"
       - run: |
-          git push --set-upstream origin temp
-          git push -f
+          git push -f --set-upstream origin temp
       - run: gh pr create --title "Pull request title" --body "Pull request body" --base "build"
