@@ -26,6 +26,7 @@ jobs:
       - name: Create pull request.
         uses: peter-evans/create-pull-request@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Minified HTML, CSS, JS. Prepared for production.
           committer: github-actions  <github-actions@users.noreply.github.com>
           author: github-actions <github-actions@users.noreply.github.com>
