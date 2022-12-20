@@ -31,5 +31,7 @@ jobs:
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
           git commit -am "STUFF"
-      - run: git push -f
+      - run: |
+          git push --set-upstream origin temp
+          git push -f
       - run: gh pr create --title "Pull request title" --body "Pull request body" --base "build"
