@@ -34,5 +34,4 @@ jobs:
           body: Automated with [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action.
           assignees: MajorDroolz
           reviewers: MajorDroolz
-          branch: temp
           base: build
