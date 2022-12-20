@@ -28,4 +28,6 @@ jobs:
           for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
           for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
       
+      - run: git commit -am "STUFF"
+      - run: git push -f
       - run: gh pr create --title "Pull request title" --body "Pull request body" --base "build"
