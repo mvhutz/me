@@ -20,14 +20,12 @@ jobs:
           npm i -g terser csso-cli html-minifier
 
       # Use CLI tools to minify, overwriting existing files
-      - run: |
-          for i in `find . -name "*.js" -type f`; do terser $i --compress -o $i; done
-          for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
-          for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
+      - run: for i in `find . -name "*.js" -type f`; do terser $i --compress -o $i; done
+      - run: for i in `find . -name "*.css" -type f`; do csso $i -o $i; done
+      - run: for i in `find . -name "*.html" -type f`; do html-minifier --remove-comments --collapse-whitespace $i -o $i; done
       
       # Push changes to `build` branch
-      - run: |
-          git config user.name ${{github.actor}}
-          git config user.email ${{github.actor}}@user.noreply.github.com
-          git commit -am 'Automated minify of ${{github.sha}}'
-          git push --force -u origin build
+      - run: git config user.name ${{github.actor}}
+      - run: git config user.email ${{github.actor}}@user.noreply.github.com
+      - run: git commit -am 'Automated minify of ${{github.sha}}'
+      - run: git push --force -u origin main:build
