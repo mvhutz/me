@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/res/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&display=swap">
+    
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
     <title>Max's Place</title>
@@ -14,10 +23,10 @@
       <nav class="navbar">
         <a href="#" class="button" data-i="home">Max's Place</a>
         <div class="flex-space"></div>
-        <a href="/about" class="red icon nav12 button" data-i="accessibility_new"><p>About</p></a>
-        <a href="/projects" class="yellow icon nav12 button" data-i="design_services"><p>Projects</p></a>
+        <a href="#about-me" class="red icon nav12 button" data-i="accessibility_new"><p>About</p></a>
+        <a href="#projects" class="yellow icon nav12 button" data-i="design_services"><p>Projects</p></a>
         <a href="/resume" class="green icon nav12 button" data-i="draft"><p>Resume</p></a>
-        <a href="/contact" class="blue icon nav12 button" data-i="push_pin"><p>Contact</p></a>
+        <a href="#contact-me" class="blue icon nav12 button" data-i="push_pin"><p>Contact</p></a>
         <button class="icon button nav3" data-i="menu" onclick="openMenu()"></button>
       </nav>
       <div id="title-page">
@@ -33,17 +42,20 @@
       </div>
     </header>
     
-    <section>
+    <section id="about-me">
+      <div id="about-me-back"></div>
       <h2>About Me</h2>
       <p>
         Passionate computer science student skilled in building <strong>
         responsive, full-stack applications</strong>. Motivated to learn from
-        colleagues and <strong>future developers</strong>. Seeks role to fashion
-        software solutions, focused on <strong>teamwork and creativity</strong>.
+        colleagues and <strong>teach future developers</strong>. Seeks role to
+        fashion software solutions, focused on <strong>teamwork and creativity
+        </strong>.
       </p>
     </section>
   
-    <section>
+    <section id="projects">
+      <div id="projects-me-back"></div>
       <h2>Projects</h2>
       <p>
         A selection of applications worked on as a computer scientist, from
@@ -70,7 +82,8 @@
       <a href="/projects">View all Projects</a>
     </section>
   
-    <section>
+    <section id="my-experience">
+      <div id="my-experience-back"></div>
       <h2>My Experience</h2>
       <p>
         I've had varied experiences: from <strong>mentoring fellow undergrads
@@ -83,7 +96,7 @@
       </div>
     </section>
   
-    <footer>
+    <footer id="contact-me">
       <h2>Contact Me!</h2>
       <nav>
         <a href="mailto:maximhutz@gmail.com">maximhutz@gmail.com</a>

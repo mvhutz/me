@@ -22,7 +22,6 @@
 
 html {
   font-size: 1vw;
-  background: black;
   animation: var(--enter) scene-enter;
 }
 
