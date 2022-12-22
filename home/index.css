@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,200');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&display=swap');
 
 /*----------------------------------------------------------------------------*/
 
@@ -12,9 +12,9 @@
 
   --light: #FEFADC;
   --dark: #504B43;
-  --red: #F8333C;
+  --red: #EC1B24;
   --yellow: #FCAB10;
-  --green: #8FD694;
+  --green: #62C869;
   --blue: #2B9EB3;
 
   --timing: cubic-bezier(0.2, 1, 0, 1);
@@ -30,13 +30,6 @@
 
 .flex-space { flex: 1 }
 
-.pos-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /*----------------------------------------------------------------------------*/
 
 @media (min-aspect-ratio: 6 / 5) {
@@ -49,10 +42,14 @@
   .nav1, .nav3 {
     display: none !important;
   }
+
+  .nav12 > p {
+    display: none;
+  }
 }
 
 @media (max-aspect-ratio: 3 / 4) {
-  .nav1, .nav2 {
+  .nav1, .nav2, .nav12 {
     display: none !important;
   }
 }
@@ -64,10 +61,13 @@ html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
+  padding: 100vh 0;
 }
 
-nav {
+header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   filter: drop-shadow(0px 0px 100px #000);
 }
@@ -111,8 +111,9 @@ nav {
 #title-name::before {
   content: "Hi! I'm";
   position: absolute;
-  font-family: "Source Serif Pro", serif;
-  font-style: italic;
+  text-transform: none;
+  font-family: "Source Code Pro";
+  font-weight: normal;
   font-size: calc(min(6vh, 8vw));
   line-height: calc(min(5vh, 7vw));
   top: 0;
@@ -123,6 +124,7 @@ nav {
 
 .fade-text::before {
   content: attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t) " " attr(data-t);
+  text-transform: uppercase;
   font-size: calc(min(12vh, 16vw));
   line-height: calc(min(11vh, 14vw));
   font-family: "Open Sans", sans-serif;
@@ -135,6 +137,7 @@ nav {
   position: absolute;
   top: 0;
   left: 50%;
+  text-transform: uppercase;
   translate: -50% 0;
   font-size: calc(min(12vh, 16vw));
   line-height: calc(min(11vh, 14vw));
@@ -148,13 +151,9 @@ nav {
 }
 
 .fade1 { opacity: 05%; translate: 0 0; }
-
 .fade2 { opacity: 10%; translate: -5% 0; }
-
 .fade3 { opacity: 20%; translate: 5% 0; }
-
 .fade4 { opacity: 25%; translate: -10% 0; }
-
 .fade5 { opacity: 30%; translate: 10% 0; }
 
 .navbar {
@@ -167,27 +166,8 @@ nav {
   z-index: 100;
 }
 
-nav a:nth-child(1) { animation: nav-enter 2s 000ms var(--timing) backwards; }
-nav a:nth-child(2) { animation: nav-enter 2s 100ms var(--timing) backwards; }
-nav a:nth-child(3) { animation: nav-enter 2s 200ms var(--timing) backwards; }
-nav a:nth-child(4) { animation: nav-enter 2s 300ms var(--timing) backwards; }
-nav a:nth-child(5) { animation: nav-enter 2s 400ms var(--timing) backwards; }
-nav a:nth-child(6) { animation: nav-enter 2s 500ms var(--timing) backwards; }
-nav a:nth-child(7) { animation: nav-enter 2s 600ms var(--timing) backwards; }
-
-@keyframes nav-enter {
-  from {
-    opacity: 0;
-    transform: translateX(-7%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
 .button {
+  white-space: nowrap;
   position: relative;
   font-style: normal;
   display: flex;
@@ -249,11 +229,6 @@ nav a:nth-child(7) { animation: nav-enter 2s 600ms var(--timing) backwards; }
 
 /*----------------------------------------------------------------------------*/
 
-article {
-  margin-bottom: 200vh;
-  background-color: var(--color, transparent);
-}
-
 #about-section {
   height: 60vmin;
 }
@@ -267,7 +242,6 @@ article {
 
 #menu-modal::backdrop {
   background-color: #0008;
-  animation: 0.5s ease menu-back-enter;
 }
 
 #menu-modal {
@@ -291,28 +265,4 @@ article {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
   background-color: var(--light);
-}
-
-#menu-modal[open] {
-  animation: 0.5s ease menu-enter;
-}
-
-@keyframes menu-enter {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes menu-back-enter {
-  from {
-    filter: opacity(0);
-  }
-
-  to {
-    filter: opacity(1);
-  }
 }

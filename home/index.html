@@ -10,41 +10,104 @@
     <title>Max's Place</title>
   </head>
   <body>
-   <nav>
-      <header class="navbar nav1">
-        <a href="#" class="button" data-i="home">Max's&nbsp;Place</a>
+   <header>
+      <nav class="navbar">
+        <a href="#" class="button" data-i="home">Max's Place</a>
         <div class="flex-space"></div>
-        <a href="/about" class="red icon button" data-i="accessibility_new">About</a>
-        <a href="/projects" class="yellow icon button" data-i="design_services">Projects</a>
-        <a href="/resume" class="green icon button" data-i="draft">Resume</a>
-        <a href="/contact" class="blue icon button" data-i="push_pin">Contact</a>
-      </header>
-      <header class="navbar nav2">
-        <a href="#" class="button" data-i="home">Max's&nbsp;Place</a>
-        <div class="flex-space"></div>
-        <a href="/about" class="red icon button" data-i="accessibility_new"></a>
-        <a href="/projects" class="yellow icon button" data-i="design_services"></a>
-        <a href="/resume" class="green icon button" data-i="draft"></a>
-        <a href="/contact" class="blue icon button" data-i="push_pin"></a>
-      </header>
-      <header class="navbar nav3">
-        <a href="#" class="button" data-i="home">Max's&nbsp;Place</a>
-        <div class="flex-space"></div>
-        <button class="icon button" data-i="menu" onclick="openMenu()"></button>
-      </header>
+        <a href="/about" class="red icon nav12 button" data-i="accessibility_new"><p>About</p></a>
+        <a href="/projects" class="yellow icon nav12 button" data-i="design_services"><p>Projects</p></a>
+        <a href="/resume" class="green icon nav12 button" data-i="draft"><p>Resume</p></a>
+        <a href="/contact" class="blue icon nav12 button" data-i="push_pin"><p>Contact</p></a>
+        <button class="icon button nav3" data-i="menu" onclick="openMenu()"></button>
+      </nav>
       <div id="title-page">
         <img src="/res/avatar.svg" alt="Avatar" id="avatar">
         <div id="title-bottom">
-          <div id="title-name">MAX HUTZ</div>
-          <div class="fade-text fade1" data-t="MAX HUTZ"></div>
-          <div class="fade-text fade2" data-t="MAX HUTZ"></div>
-          <div class="fade-text fade3" data-t="MAX HUTZ"></div>
-          <div class="fade-text fade4" data-t="MAX HUTZ"></div>
-          <div class="fade-text fade5" data-t="MAX HUTZ"></div>
+          <div id="title-name">Max Hutz</div>
+          <div class="fade-text fade1" data-t="Max Hutz"></div>
+          <div class="fade-text fade2" data-t="Max Hutz"></div>
+          <div class="fade-text fade3" data-t="Max Hutz"></div>
+          <div class="fade-text fade4" data-t="Max Hutz"></div>
+          <div class="fade-text fade5" data-t="Max Hutz"></div>
         </div>
       </div>
-    </nav>
-    <article id="title-section"></article>
+    </header>
+    
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Passionate computer science student skilled in building <strong>
+        responsive, full-stack applications</strong>. Motivated to learn from
+        colleagues and <strong>future developers</strong>. Seeks role to fashion
+        software solutions, focused on <strong>teamwork and creativity</strong>.
+      </p>
+    </section>
+  
+    <section>
+      <h2>Projects</h2>
+      <p>
+        A selection of applications worked on as a computer scientist, from
+        flexible web solutions to REST-ful mobile apps.
+      </p>
+      <section>
+        <h3>Malung</h3>
+        <img src="/res/avatar.svg" width="300" height="300">
+        <p>
+          A cloud-based COVID-19 classifier incorporating AI deep learning. Using
+          MariaDB and Microsoft Azure, users can store...
+        </p>
+        <a href="/projects/malung">Learn more →</a>
+      </section>
+      <section>
+        <h3>Fresh-Manual</h3>
+        <img src="/res/avatar.svg" width="300" height="300">
+        <p>
+          A mobile companion to Fresh Manuals website to find, save and organize
+          product manuals. UI built with React, React-Native, and SwiftUI...
+        </p>
+        <a href="/projects/freshmanual">Learn more →</a>
+      </section>
+      <a href="/projects">View all Projects</a>
+    </section>
+  
+    <section>
+      <h2>My Experience</h2>
+      <p>
+        I've had varied experiences: from <strong>mentoring fellow undergrads
+        </strong> to performing in fast-paced settings where <strong>communication
+        and innovation</strong> are key.
+      </p>
+      <div>
+        <img src="/res/avatar.svg" width="300" height="300">
+        <a href="/projects/freshmanual">View Resume →</a>
+      </div>
+    </section>
+  
+    <footer>
+      <h2>Contact Me!</h2>
+      <nav>
+        <a href="mailto:maximhutz@gmail.com">maximhutz@gmail.com</a>
+        <a href="tel:+19142165972">914.216.5972</a>
+        <a href="#">New York City or Tri-State Area Preferred</a>
+      </nav>
+      <form action="#" method="post">
+        <div>
+          <label for="fullname">Full Name</label>
+          <input type="text" name="fullname" id="fullname">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email">
+        </div>
+        <div>
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </footer>
+
+<!----------------------------------------------------------------------------->
 
     <dialog id="menu-modal">
       <div id="menu-inner">
