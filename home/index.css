@@ -249,40 +249,65 @@ header {
 
 #about-me__title {
   text-align: right;
-  margin-right: 10vmin;
-  margin-bottom: 10vmin;
   font-size: 15vmin;
-  flex-basis: 60vmin;
+  width: 60vmin;
   z-index: 100;
   line-height: 15vmin;
+  margin-right: 10vmin;
+}
+
+#about-me__text-holder {
+  width: 80vmin;
+  height: 70vmin;
+  overflow: visible;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #about-me__text-outer {
-  filter: drop-shadow(0px 20px 20px #0009);
-  flex-basis: 80vmin;
+  position: absolute;
+  background: var(--red);
+  box-shadow: 0px 10px 50px 0 #000;
+  padding: 20vh;
+  width: 81vmin;
+  overflow: hidden;
+  transform: rotate(5deg);
 }
 
 #about-me__text {
-  --x: 50%;
-  --y: 30%;
-  --path: polygon(
-    -25% -50%,
-    155% -30%,
-    150% 150%,
-    -30% 130%
-  );
-
   font-size: 4vmin;
-  background: var(--red);
-  outline: 100vmax solid var(--red);
-  -webkit-clip-path: var(--path);
-  clip-path: var(--path);
   position: relative;
+  transform: rotate(-5deg);
 }
 
 .back-text {
   position: absolute;
-  bottom: -50%;
+  bottom: -60%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.icon::before {
+  content: attr(data-i);
+  font-family: "Material Symbols Outlined";
+  font-size: 10vh;
+  z-index: 1000;
+  color: var(--color);
+}
+
+#about-me-icon1 {
+  position: absolute;
+  top: 5vh;
+  left: 15vh;
+  color: white;
+  z-index: 100;
+}
+
+#about-me-icon2 {
+  position: absolute;
+  bottom: 10vh;
+  right: 15vh;
+  color: white;
+  z-index: 100;
 }
