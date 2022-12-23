@@ -31,6 +31,11 @@ html {
   color: white;
 }
 
+html, body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -237,9 +242,9 @@ header {
 
 #about-me {
   width: 100vw;
+  overflow-x: hidden;
   min-height: 100vh;
   margin: 10vh 0;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,7 +264,6 @@ header {
 #about-me__text-holder {
   width: 80vmin;
   height: 70vmin;
-  overflow: visible;
   display: inline-flex;
   justify-content: center;
   align-items: center;
