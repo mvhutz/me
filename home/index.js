@@ -26,6 +26,8 @@ function main() {
   if (menu == null) return;
   menu.addEventListener("click", clickMenuModal);
   menu.addEventListener("touchstart", clickMenuModal);
+
+  calcScroll();
 }
 
 function clickMenuModal(e) {
