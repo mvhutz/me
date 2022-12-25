@@ -242,6 +242,7 @@ h2 {
   font-weight: 900;
   font-size: 15vmin;
   text-transform: uppercase;
+  line-height: 15vmin;
 }
 
 h3 {
@@ -282,7 +283,7 @@ a {
   height: 100%;
   padding: 10vmin 20vmin;
   background-color: var(--color);
-  box-shadow: 0px 10px 50px 0 #000;
+  box-shadow: var(--shadow);
   overflow: hidden;
   z-index: -1;
 }
@@ -386,11 +387,11 @@ a {
 
 .project-desc__img {
   flex: 1;
-  min-width: 70vmin;
+  min-width: 50vmin;
   height: 50vmin;
-  box-shadow: 0px 10px 50px 0 #0008;
+  box-shadow: var(--shadow);
   border-radius: 2vmin;
-  box-sizing: border-box;
+  background: white;
 }
 
 #projects-inner {
@@ -398,7 +399,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
-  transform: rotate(calc(-1 * var(--rotate))) translateY(17vmin);
+  transform: rotate(calc(-1 * var(--rotate))) translateY(20vmin);
 }
 
 #view-projects-button {
@@ -416,7 +417,7 @@ a {
 #view-all-button {
   user-select: none;
   position: absolute;
-  top: -1vmin;
+  top: -4vmin;
   left: 1vmin;
   font-size: 5vmin;
 }
@@ -424,7 +425,7 @@ a {
 #view-projects-icon {
   user-select: none;
   position: absolute;
-  top: -4vmin;
+  top: -6vmin;
   right: 1vmin;
 }
 
@@ -444,3 +445,64 @@ a {
 }
 
 /*----------------------------------------------------------------------------*/
+
+#my-experience {
+  max-width: 200vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#my-experience__title {
+  margin-bottom: 5vmin;
+  font-size: 13vmin;
+}
+
+#my-experience__text-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  gap: 30vmin;
+}
+
+#my-experience__text {
+  position: relative;
+  width: 50vmin;
+}
+
+#my-experience__back {
+  --rotate: 5deg;
+  --color: var(--green);
+  padding: 10vmin 15vmin;
+}
+
+#my-experience-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  transform: rotate(calc(-1 * var(--rotate))) translateY(10%);
+}
+
+#my-experience__resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vmin;
+}
+
+#my-experience__resume-img {
+  width: 40vmin;
+  height: 60vmin;
+  background-color: white;
+  border-radius: 2vmin;
+  box-shadow: var(--shadow);
+}
+
+#my-experience__resume-button {
+  
+}
