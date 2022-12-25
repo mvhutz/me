@@ -23,10 +23,10 @@
       <nav class="navbar">
         <a href="#" class="button" data-i="home">Max's Place</a>
         <div class="flex-space"></div>
-        <a href="#about-me" class="red icon nav12 button" data-i="accessibility_new"><p>About</p></a>
-        <a href="#projects" class="yellow icon nav12 button" data-i="design_services"><p>Projects</p></a>
-        <a href="/resume" class="green icon nav12 button" data-i="draft"><p>Resume</p></a>
-        <a href="#contact-me" class="blue icon nav12 button" data-i="push_pin"><p>Contact</p></a>
+        <a href="#about-me" class="red icon nav12 button" data-i="accessibility_new">About</a>
+        <a href="#projects" class="yellow icon nav12 button" data-i="design_services">Projects</a>
+        <a href="/resume" class="green icon nav12 button" data-i="draft">Resume</a>
+        <a href="#contact-me" class="blue icon nav12 button" data-i="push_pin">Contact</a>
         <button class="icon button nav3" data-i="menu" onclick="openMenu()"></button>
       </nav>
       <div id="title-page">
@@ -42,59 +42,86 @@
       </div>
     </header>
     
-    <section id="about-me">
-      <h2 id="about-me__title" class="head">About<br>Me</h2>
-      <div id="about-me__text-holder">
-        <div id="about-me__text-outer">
-          <div id="about-me-icon1" class="white icon" data-i="accessibility_new"></div>
-          <div id="about-me-icon2" class="white icon" data-i="rocket_launch"></div>
-          <div id="about-me__text">
-            <div class="back-text">
-              <div class="fade-text fade1" data-t="About Me"></div>
-              <div class="fade-text fade2" data-t="About Me"></div>
-              <div class="fade-text fade3" data-t="About Me"></div>
-            </div>
-            <p class="body">
-              Passionate computer science student skilled in building <strong>
-              responsive, full-stack applications</strong>. Motivated to learn from
-              colleagues and <strong>teach future developers</strong>. Seeks role to
-              fashion software solutions, focused on <strong>teamwork and
-              creativity</strong>.
-            </p>
+    <section id="about-me" class="card">
+      <h2 id="about-me__title">About<br>Me</h2>
+      <div id="about-me__text">
+        <p id="about-me-icon1" class="white icon" data-i="accessibility_new"></p>
+
+        <div id="about-me__back" class="card-back">
+          <div id="about-me-inner" class="card-back-inner">
+            <div class="fade-text fade1" data-t="About Me"></div>
+            <div class="fade-text fade2" data-t="About Me"></div>
+            <div class="fade-text fade3" data-t="About Me"></div>
           </div>
         </div>
+
+        <p>
+          Passionate computer science student skilled in building
+          <b>responsive, full-stack applications</b>.
+  
+          Motivated to learn from colleagues and
+          <b>teach future developers</b>.
+  
+          Seeks role to fashion software solutions, focused on
+          <b>teamwork and creativity</b>.
+        </p>
       </div>
     </section>
   
-    <section id="projects">
-      <div id="projects-me-back"></div>
-      <h2>Projects</h2>
-      <p>
-        A selection of applications worked on as a computer scientist, from
-        flexible web solutions to REST-ful mobile apps.
-      </p>
-      <section>
-        <h3>Malung</h3>
-        <img src="/res/avatar.svg" width="300" height="300">
+    <section id="projects" class="card">
+      <h2 id="projects__title">Projects</h2>
+      <div id="projects__text">
+        <p id="projects-icon1" class="white icon" data-i="design_services"></p>
+
+        <div id="projects__back" class="card-back">
+          <div id="projects-inner" class="card-back-inner">
+            <div class="fade-text fade1" data-t="Projects"></div>
+            <div class="fade-text fade2" data-t="Projects"></div>
+            <div class="fade-text fade3" data-t="Projects"></div>
+          </div>
+        </div>
+
         <p>
-          A cloud-based COVID-19 classifier incorporating AI deep learning. Using
-          MariaDB and Microsoft Azure, users can store...
+          A selection of applications worked on as a computer scientist, from
+          flexible web solutions to REST-ful mobile apps.
         </p>
-        <a href="/projects/malung">Learn more →</a>
-      </section>
-      <section>
-        <h3>Fresh-Manual</h3>
-        <img src="/res/avatar.svg" width="300" height="300">
-        <p>
-          A mobile companion to Fresh Manuals website to find, save and organize
-          product manuals. UI built with React, React-Native, and SwiftUI...
-        </p>
-        <a href="/projects/freshmanual">Learn more →</a>
-      </section>
-      <a href="/projects">View all Projects</a>
+
+        <section class="project-section">
+          <h3 class="fade-horizontal" data-t="Malung">Malung</h3>
+          <div class="project__description">
+            <p class="p2 project-desc__text">
+              A cloud-based COVID-19 classifier incorporating AI deep learning.
+              Using MariaDB and Microsoft Azure, users can store...<br><br>
+              <a href="/projects/malung">Learn more →</a>
+            </p>
+            <img class="project-desc__img" src="/res/malung.svg" width="300" height="300">
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h3 class="fade-horizontal" data-t="Fresh-Manual">Fresh-Manual</h3>
+          <div class="project__description">
+            <p class="p2 project-desc__text">
+              A mobile companion to Fresh Manuals website to find, save and
+              organize product manuals. UI built with React, React-Native, and
+              SwiftUI...<br><br>
+              <a href="/projects/freshmanual">Learn more →</a>
+            </p>
+            <img class="project-desc__img" src="/res/freshmanual.svg" width="300" height="300">
+          </div>
+        </section>
+
+        <a href="/projects" id="view-projects-button">
+          <div id="view-projects-button-inner">
+            <h2>Projects</h2>
+            <h3 id="view-all-button">View All</h3>
+            <p id="view-projects-icon" class="white icon" data-i="visibility"></p>
+          </div>
+        </a>
+      </div>
     </section>
   
-    <section id="my-experience">
+    <section id="my-experience" class="card">
       <div id="my-experience-back"></div>
       <h2>My Experience</h2>
       <p>
@@ -108,7 +135,7 @@
       </div>
     </section>
   
-    <footer id="contact-me">
+    <footer id="contact-me" class="card">
       <h2>Contact Me!</h2>
       <nav>
         <a href="mailto:maximhutz@gmail.com">maximhutz@gmail.com</a>
