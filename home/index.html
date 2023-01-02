@@ -15,172 +15,37 @@
     
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="index.css">
+
     <script src="index.js"></script>
-    <title>Max's Place</title>
+    <title>Max Hutz</title>
   </head>
   <body>
-   <header>
-      <nav class="navbar">
-        <a href="#" class="button" data-i="home">Max's Place</a>
-        <div class="flex-space"></div>
-        <a href="#about-me" class="red icon nav12 button" data-i="accessibility_new">About</a>
-        <a href="#projects" class="yellow icon nav12 button" data-i="design_services">Projects</a>
-        <a href="/resume" class="green icon nav12 button" data-i="draft">Resume</a>
-        <a href="#contact-me" class="blue icon nav12 button" data-i="push_pin">Contact</a>
-        <button class="icon button nav3" data-i="menu" onclick="openMenu()"></button>
-      </nav>
-      <div id="title-page">
-        <img src="/res/avatar.svg" alt="Avatar" id="avatar">
-        <div id="title-bottom">
-          <div id="title-name">Max Hutz</div>
-          <div class="fade-text fade1" data-t="Max Hutz"></div>
-          <div class="fade-text fade2" data-t="Max Hutz"></div>
-          <div class="fade-text fade3" data-t="Max Hutz"></div>
-          <div class="fade-text fade4" data-t="Max Hutz"></div>
-          <div class="fade-text fade5" data-t="Max Hutz"></div>
-        </div>
-      </div>
+    <div id="header-back" class="shadow"></div>
+    <header class="clamp-width">
+      <a href="#" class="nav-link">MAX HUTZ</a>
+      <div class="flex-space"></div>
+      <a href="#" class="nav-link icon" data-i="work">Experience</a>
+      <a href="#" class="nav-link icon" data-i="clinical_notes">Resume</a>
+      <a href="#" class="nav-link icon" data-i="mail">Contact</a>
     </header>
-    
-    <section id="about-me" class="card">
-      <h2 id="about-me__title">About<br>Me</h2>
-      <div id="about-me__text">
-        <p id="about-me-icon1" class="white icon" data-i="accessibility_new"></p>
-
-        <div id="about-me__back" class="card-back">
-          <div id="about-me-inner" class="card-back-inner">
-            <div class="fade-text fade1" data-t="About Me"></div>
-            <div class="fade-text fade2" data-t="About Me"></div>
-            <div class="fade-text fade3" data-t="About Me"></div>
-          </div>
-        </div>
-
-        <p>
-          Passionate computer science student skilled in building
-          <b>responsive, full-stack applications</b>.
-  
-          Motivated to learn from colleagues and
-          <b>teach future developers</b>.
-  
-          Seeks role to fashion software solutions, focused on
-          <b>teamwork and creativity</b>.
-        </p>
+    <section id="about" class="clamp-width">
+      <img src="/res/avatar.svg" id="avatar" class="scroll-opacity">
+      <div class="scroll-opacity">
+        <h1>Hey! 👋 I'm Max Hutz.</h1>
+        <i>Software engineer in New York.</i>
       </div>
-    </section>
-  
-    <section id="projects" class="card">
-      <h2 id="projects__title">Projects</h2>
-      <div id="projects__text">
-        <p id="projects-icon1" class="white icon" data-i="design_services"></p>
-
-        <div id="projects__back" class="card-back">
-          <div id="projects-inner" class="card-back-inner">
-            <div class="fade-text fade1" data-t="Projects"></div>
-            <div class="fade-text fade2" data-t="Projects"></div>
-            <div class="fade-text fade3" data-t="Projects"></div>
-          </div>
-        </div>
-
-        <p>
-          A selection of applications worked on as a computer scientist, from
-          flexible web solutions to REST-ful mobile apps.
-        </p>
-
-        <section class="project-section">
-          <h3 class="fade-horizontal" data-t="Malung">Malung</h3>
-          <div class="project__description">
-            <p class="p2 project-desc__text">
-              A cloud-based COVID-19 classifier incorporating AI deep learning.
-              Using MariaDB and Microsoft Azure, users can store...<br><br>
-              <a href="/projects/malung">Learn more →</a>
-            </p>
-            <img class="project-desc__img" src="/res/malung.svg" width="300" height="300">
-          </div>
-        </section>
-
-        <section class="project-section">
-          <h3 class="fade-horizontal" data-t="Fresh-Manual">Fresh-Manual</h3>
-          <div class="project__description">
-            <p class="p2 project-desc__text">
-              A mobile companion to Fresh Manuals website to find, save and
-              organize product manuals. UI built with React, React-Native, and
-              SwiftUI...<br><br>
-              <a href="/projects/freshmanual">Learn more →</a>
-            </p>
-            <img class="project-desc__img" src="/res/freshmanual.svg" width="300" height="300">
-          </div>
-        </section>
-
-        <a href="/projects" id="view-projects-button">
-          <div id="view-projects-button-inner">
-            <h2>Projects</h2>
-            <h3 id="view-all-button">View All</h3>
-            <p id="view-projects-icon" class="white icon" data-i="visibility"></p>
-          </div>
-        </a>
-      </div>
-    </section>
-  
-    <section id="my-experience" class="card">
-      <h2 id="my-experience__title">My<br>Experience</h2>
-      <div id="my-experience__text-outer">
-        <div id="my-experience__text">
-          <div id="my-experience__back" class="card-back">
-            <div id="my-experience-inner" class="card-back-inner">
-              <div class="fade-text fade1" data-t="My Experience"></div>
-              <div class="fade-text fade2" data-t="My Experience"></div>
-              <div class="fade-text fade3" data-t="My Experience"></div>
-            </div>
-          </div>
-          <p>
-            I've had varied experiences: from <strong>mentoring fellow undergrads
-            </strong> to performing in fast-paced settings where <strong>communication
-            and innovation</strong> are key.
-          </p>
-        </div>
-        <div id="my-experience__resume">
-          <img id="my-experience__resume-img" src="/res/avatar.svg" width="300" height="300">
-          <a id="my-experience__resume-button" href="/projects/freshmanual">View Resume →</a>
-        </div>
-      </div>
-    </section>
-  
-    <footer id="contact-me" class="card">
-      <h2>Contact Me!</h2>
-      <nav>
-        <a href="mailto:maximhutz@gmail.com">maximhutz@gmail.com</a>
-        <a href="tel:+19142165972">914.216.5972</a>
-        <a href="#">New York City or Tri-State Area Preferred</a>
+      <p id="about-me" class="scroll-opacity">
+        I’m a passionate computer science student skilled in building
+        responsive, full-stack applications. I love learning from colleagues
+        and teaching future developers. I thrive where teamwork and creativity
+        are key.
+      </p>
+      <hr class="darker scroll-opacity" id="about-hr">
+      <nav class="scroll-opacity">
+        <a href="mailto:maximhutz@gmail.com" class="nav-link blue button">maximhutz@gmail.com</a>
+        <a href="/resume" class="nav-link red button r-icon" data-i="arrow_right" target="_blank">View Resume</a>
       </nav>
-      <form action="#" method="post">
-        <div>
-          <label for="fullname">Full Name</label>
-          <input type="text" name="fullname" id="fullname">
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="text" name="email" id="email">
-        </div>
-        <div>
-          <label for="message">Your Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </footer>
-
-<!----------------------------------------------------------------------------->
-
-    <dialog id="menu-modal">
-      <div id="menu-inner">
-        <a href="#" class="button" data-i="home" onclick="closeMenu()">Max's&nbsp;Place</a>
-        <div class="flex-space"></div>
-        <a href="/about" class="red icon button" data-i="accessibility_new" onclick="closeMenu()">About</a>
-        <a href="/projects" class="yellow icon button" data-i="design_services" onclick="closeMenu()">Projects</a>
-        <a href="/resume" class="green icon button" data-i="draft" onclick="closeMenu()">Resume</a>
-        <a href="/contact" class="blue icon button" data-i="push_pin" onclick="closeMenu()">Contact</a>
-        <div class="flex-space"></div>
-      </div>
-    </dialog>
+    </section>
+    <section id="projects" class="clamp-width"></section>
   </body>
 </html>

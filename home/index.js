@@ -1,39 +1,10 @@
+window.onload = main;
+
 function calcScroll() {
-  const scroll = window.scrollY;
-  const vh = window.innerHeight / 100;
-  const title = document.getElementById("title-page");
-  if (title == null) return;
-  
-  title.style.setProperty("--scroll", Math.min(1, scroll / (77.5 * vh)));
-}
-
-function openMenu() {
-  const menu = document.getElementById("menu-modal");
-  if (menu == null) return;
-  menu.showModal();
-}
-
-function closeMenu() {
-  const menu = document.getElementById("menu-modal");
-  if (menu == null) return;
-  menu.close();
+  document.body.style.setProperty("--scroll", window.scrollY / (0.7 * window.innerHeight));
 }
 
 function main() {
-  window.addEventListener("scroll", () => requestAnimationFrame(calcScroll));
-
-  const menu = document.getElementById("menu-modal");
-  if (menu == null) return;
-  menu.addEventListener("click", clickMenuModal);
-  menu.addEventListener("touchstart", clickMenuModal);
-
+  window.addEventListener("scroll", calcScroll);
   calcScroll();
 }
-
-function clickMenuModal(e) {
-  const menu = document.getElementById("menu-modal");
-  if (menu == null || e.target != menu) return;
-  closeMenu();
-}
-
-window.onload = main;
