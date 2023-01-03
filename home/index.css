@@ -1,0 +1,284 @@
+* {
+  overflow: hidden;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.pre {
+  all: unset;
+  white-space: pre;
+}
+
+.nav-link {
+  color: var(--color);
+  text-decoration: none;
+  font-weight: 900;
+  font-family: "Open Sans";
+}
+
+.shadow {
+  filter: drop-shadow(0 4px 0 #0004);
+}
+
+.icon, .r-icon, .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon::before {
+  font-family: 'Material Symbols Outlined';
+  content: attr(data-i);
+  font-size: 36px;
+  margin-right: 5px;
+}
+
+.r-icon::after {
+  font-family: 'Material Symbols Outlined';
+  content: attr(data-i);
+  margin-left: 5px;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Open Sans";
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "Open Sans";
+  font-weight: 900;
+}
+
+i {
+  font-size: 20px;
+  font-size: "Source Serif Pro";
+}
+
+p {
+  font-size: 20px;
+  font-family: "Open Sans";
+  font-weight: 100;
+}
+
+.lighter {
+  background: #fff4;
+}
+
+.darker {
+  background: #0004;
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+}
+
+.button {
+  color: var(--color);
+  position: relative;
+  padding: 10px 30px;
+}
+
+.button::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--color);
+  opacity: 25%;
+  content: "";
+  border-radius: 10px;
+}
+
+.width-pad {
+  width: 100vw;
+  background-color: var(--color);
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.png-icon {
+  filter: brightness(0) invert(1);
+}
+
+/*----------------------------------------------------------------------------*/
+
+#header-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header {
+  margin: auto;
+  max-width: 1024px;
+  display: flex;
+  gap: 40px;
+  font-size: 25px;
+  font-family: "Open Sans";
+  font-weight: bolder;
+  color: var(--dark);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#about {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1024px;
+  min-height: 90vh;
+  color: var(--dark);
+  padding-top: 30px;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+#about > * {
+  max-width: 600px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#inner-nav {
+  display: inline-flex;
+  flex-grow: 1;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/*----------------------------------------------------------------------------*/
+
+#projects {
+  margin: 30px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1024px;
+  min-height: 100vh;
+  color: white;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+#project-list {
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.project-item {
+  min-width: max(40%, 300px);
+  flex: 1;
+  height: 300px;
+  background-color: var(--color);
+  border-radius: 10px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-link {
+  color: white;
+  background-color: #0005;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+#experience-button {
+  align-self: center;
+}
+
+#footer-pad {
+  background: var(--dark) linear-gradient(#0002, #0002);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: 1024px;
+  margin: auto;
+  gap: 10px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+#menu {
+  top: 0;
+  left: 0;
+  max-width: none;
+  max-height: none;
+  position: fixed;
+  background-color: var(--light);
+  color: var(--dark);
+  width: 100vw;
+  font-size: 25px;
+  overflow: visible;
+}
+
+#menu-top {
+  display: flex;
+  align-items: center;
+  transform: translateY(-1.5px);
+}
+
+#menu-inner {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+@media (max-width: 464px) {
+  .nav2, .nav3 {
+    display: none;
+  }
+}
+
+@media (max-width: 813px) and (min-width: 465px) {
+  .nav1, .nav3 {
+    display: none;
+  }
+}
+
+@media (min-width: 814px) {
+  .nav1, .nav2 {
+    display: none;
+  }
+}

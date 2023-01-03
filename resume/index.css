@@ -22,7 +22,6 @@
 
 html {
   font-size: 1vw;
-  background: black;
   animation: var(--enter) scene-enter;
 }
 
@@ -148,7 +147,7 @@ article {
 }
 
 body::before {
-  background: lightsteelblue linear-gradient(45deg, #F008, #00F8);
+  background: lightsteelblue var(--grad);
   width: 100vw;
   height: 100vh;
   content: "";

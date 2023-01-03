@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  outline: 0;
+}
+
+:root {
+  --light: #FEFADC;
+  --dark: #504B43;
+  --red: #EC1B24;
+  --yellow: #E19200;
+  --green: #4CB753;
+  --blue: #2B9EB3;
+
+  --timing: cubic-bezier(0.2, 1, 0, 1);
+  --start-timing: cubic-bezier(0,.5,0,.9);
+
+  --grad: linear-gradient(45deg, #F008, #00F8);
+  --shadow: 0px 10px 50px 0 #0008;
+}
+
+.light { --color: var(--light) }
+.dark { --color: var(--dark) }
+.red { --color: var(--red) }
+.yellow { --color: var(--yellow) }
+.green { --color: var(--green) }
+.blue { --color: var(--blue) }
+.white { --color: white }
+
+.flex-space, .flex { flex-grow: 1 }
+.space { flex: 1000 }
+
+/*----------------------------------------------------------------------------*/
+
+html {
+  background: var(--dark);
+}
