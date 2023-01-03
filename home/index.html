@@ -27,10 +27,10 @@
         <a href="/experience" class="nav-link dark icon nav3" data-i="work">Experience</a>
         <a href="/resume" class="nav-link dark icon nav3" data-i="clinical_notes">Resume</a>
         <a href="mailto:maximhutz@gmail.com" class="nav-link dark icon nav3" data-i="mail">Contact</a>
-        <a href="/experience" class="nav-link dark icon nav2" data-i="work" role="img" aria-label="Experience"></a>
-        <a href="/resume" class="nav-link dark icon nav2" data-i="clinical_notes" role="img" aria-label="Resume"></a>
-        <a href="mailto:maximhutz@gmail.com" class="nav-link dark icon nav2" data-i="mail" role="img" aria-label="Contact"></a>
-        <button class="nav-link dark icon nav1" data-i="menu" role="img" aria-label="Menu" onclick="document.getElementById('menu')?.showModal()"></button>
+        <a href="/experience" class="nav-link dark icon nav2" data-i="work" aria-label="Experience"></a>
+        <a href="/resume" class="nav-link dark icon nav2" data-i="clinical_notes" aria-label="Resume"></a>
+        <a href="mailto:maximhutz@gmail.com" class="nav-link dark icon nav2" data-i="mail" aria-label="Contact"></a>
+        <button class="nav-link dark icon nav1" data-i="menu" aria-label="Menu" onclick="document.getElementById('menu')?.showModal()"></button>
       </header>
     </div>
 
@@ -39,7 +39,7 @@
         <div class="flex"></div>
         <div class="flex"></div>
         <div>
-          <h1>Hey! 👋 <pre>I'm Max Hutz.</pre></h1>
+          <h1>Hey! 👋 <span class="pre">I'm Max Hutz.</span></h1>
           <i>Software engineer in New York.</i>
         </div>
         <p id="about-me">
@@ -48,7 +48,7 @@
           and teaching future developers. I thrive where teamwork and creativity
           are key.
         </p>
-        <hr class="darker" id="about-hr">
+        <hr class="darker">
         <nav>
           <div id="inner-nav">
             <a href="mailto:maximhutz@gmail.com" class="nav-link blue button flex">maximhutz@gmail.com</a>
@@ -64,24 +64,24 @@
       <section id="projects">
         <h2>Worked on:</h2>
         <div id="project-list">
-          <div class="yellow project-item shadow">
+          <a class="yellow project-item shadow" href="/experience/malung">
             <div class="space"></div>
-            <a href="/experience/malung" class="nav-link project-link r-icon" data-i="arrow_right">Malung: COVID-19 Classifier</a>
-          </div>
-          <div class="blue project-item shadow">
+            <div class="nav-link project-link r-icon" data-i="arrow_right">Malung: COVID-19 Classifier</div>
+          </a>
+          <a class="blue project-item shadow" href="/experience/freshmanual">
             <div class="space"></div>
-            <a href="/experience/freshmanual" class="nav-link project-link r-icon" data-i="arrow_right">Freshmanual: Mobile App</a>
-          </div>
-          <div class="green project-item shadow">
+            <div class="nav-link project-link r-icon" data-i="arrow_right">Freshmanual: Mobile App</div>
+          </a>
+          <a class="green project-item shadow" href="/experience/pollbuddy">
             <div class="space"></div>
-            <a href="/experience/pollbuddy" class="nav-link project-link r-icon" data-i="arrow_right">Poll Buddy</a>
-          </div>
-          <div class="red project-item shadow">
+            <div class="nav-link project-link r-icon" data-i="arrow_right">Poll Buddy</div>
+          </a>
+          <a class="red project-item shadow" href="/experience/rpi-crisis">
             <div class="space"></div>
-            <a href="/experience/rpi-crisis" class="nav-link project-link r-icon" data-i="arrow_right">CRISIS</a>
-          </div>
+            <div class="nav-link project-link r-icon" data-i="arrow_right">CRISIS</div>
+          </a>
         </div>
-        <hr class="lighter" id="about-hr">
+        <hr class="lighter">
         <a href="/experience" id="experience-button" class="nav-link white button">View all experiences.</a>
       </section>
     </div>
@@ -96,24 +96,24 @@
         <a href="https://www.linkedin.com/in/maximhutz/" class="png-icon" target="_blank">
           <img src="/res/icons/linkedin.png" alt="LinkedIn" width="30" height="30">
         </a>
-        <a href="mailto:maximhutz@gmail.com" class="nav-link white icon" data-i="mail" role="img" aria-label="Contact" target="_blank"></a>
+        <a href="mailto:maximhutz@gmail.com" class="nav-link white icon" data-i="mail" aria-label="Contact" target="_blank"></a>
       </footer>
     </div>
 
     <dialog id="menu">
       <div class="light width-pad shadow">
-        <section id="menu-inner">
+        <div id="menu-inner">
           <div id="menu-top">
             <a href="/home" class="nav-link dark">MAX HUTZ</a>
             <div class="flex"></div>
             <form method="dialog">
-              <button class="nav-link dark icon" data-i="close" role="img" aria-label="Close"></button>
+              <button class="nav-link dark icon" data-i="close" aria-label="Close"></button>
             </form>
           </div>
           <a href="/experience" class="nav-link dark icon" data-i="work">Experience</a>
           <a href="/resume" class="nav-link dark icon" data-i="clinical_notes">Resume</a>
           <a href="mailto:maximhutz@gmail.com" class="nav-link dark icon" data-i="mail">Contact</a>
-        </section>
+        </div>
       </div>
     </dialog>
   </body>

@@ -1,5 +1,6 @@
 * {
   overflow: hidden;
+  text-decoration: none;
 }
 
 button {
@@ -20,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 
-pre {
+.pre {
   all: unset;
   white-space: pre;
 }
