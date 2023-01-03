@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the home page of Maxim Voldman Hutz's personal website.">
+
     <link rel="icon" type="image/x-icon" href="/res/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -15,37 +17,104 @@
     
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="index.css">
-
-    <script src="index.js"></script>
     <title>Max Hutz</title>
   </head>
   <body>
-    <div id="header-back" class="shadow"></div>
-    <header class="clamp-width">
-      <a href="#" class="nav-link">MAX HUTZ</a>
-      <div class="flex-space"></div>
-      <a href="#" class="nav-link icon" data-i="work">Experience</a>
-      <a href="#" class="nav-link icon" data-i="clinical_notes">Resume</a>
-      <a href="#" class="nav-link icon" data-i="mail">Contact</a>
-    </header>
-    <section id="about" class="clamp-width">
-      <img src="/res/avatar.svg" id="avatar" class="scroll-opacity">
-      <div class="scroll-opacity">
-        <h1>Hey! 👋 I'm Max Hutz.</h1>
-        <i>Software engineer in New York.</i>
+    <div id="header-outer" class="light width-pad shadow">
+      <header>
+        <a href="#" class="nav-link dark">MAX HUTZ</a>
+        <div class="flex"></div>
+        <a href="/experience" class="nav-link dark icon nav3" data-i="work">Experience</a>
+        <a href="/resume" class="nav-link dark icon nav3" data-i="clinical_notes">Resume</a>
+        <a href="mailto:maximhutz@gmail.com" class="nav-link dark icon nav3" data-i="mail">Contact</a>
+        <a href="/experience" class="nav-link dark icon nav2" data-i="work" role="img" aria-label="Experience"></a>
+        <a href="/resume" class="nav-link dark icon nav2" data-i="clinical_notes" role="img" aria-label="Resume"></a>
+        <a href="mailto:maximhutz@gmail.com" class="nav-link dark icon nav2" data-i="mail" role="img" aria-label="Contact"></a>
+        <button class="nav-link dark icon nav1" data-i="menu" role="img" aria-label="Menu" onclick="document.getElementById('menu')?.showModal()"></button>
+      </header>
+    </div>
+
+    <div class="light width-pad">
+      <section id="about">
+        <div class="flex"></div>
+        <div class="flex"></div>
+        <div>
+          <h1>Hey! 👋 <pre>I'm Max Hutz.</pre></h1>
+          <i>Software engineer in New York.</i>
+        </div>
+        <p id="about-me">
+          I’m a passionate computer science student skilled in building
+          responsive, full-stack applications. I love learning from colleagues
+          and teaching future developers. I thrive where teamwork and creativity
+          are key.
+        </p>
+        <hr class="darker" id="about-hr">
+        <nav>
+          <div id="inner-nav">
+            <a href="mailto:maximhutz@gmail.com" class="nav-link blue button flex">maximhutz@gmail.com</a>
+            <a href="/resume" class="nav-link red button r-icon flex" data-i="arrow_right" target="_blank">View Resume</a>
+          </div>
+          <div class="space"></div>
+        </nav>
+        <div class="flex"></div>
+      </section>
+    </div>
+
+    <div class="dark width-pad">
+      <section id="projects">
+        <h2>Worked on:</h2>
+        <div id="project-list">
+          <div class="yellow project-item shadow">
+            <div class="space"></div>
+            <a href="/experience/malung" class="nav-link project-link r-icon" data-i="arrow_right">Malung: COVID-19 Classifier</a>
+          </div>
+          <div class="blue project-item shadow">
+            <div class="space"></div>
+            <a href="/experience/freshmanual" class="nav-link project-link r-icon" data-i="arrow_right">Freshmanual: Mobile App</a>
+          </div>
+          <div class="green project-item shadow">
+            <div class="space"></div>
+            <a href="/experience/pollbuddy" class="nav-link project-link r-icon" data-i="arrow_right">Poll Buddy</a>
+          </div>
+          <div class="red project-item shadow">
+            <div class="space"></div>
+            <a href="/experience/rpi-crisis" class="nav-link project-link r-icon" data-i="arrow_right">CRISIS</a>
+          </div>
+        </div>
+        <hr class="lighter" id="about-hr">
+        <a href="/experience" id="experience-button" class="nav-link white button">View all experiences.</a>
+      </section>
+    </div>
+
+    <div id="footer-pad" class="dark width-pad">
+      <footer>
+        <h2>&copy; 2022</h2>
+        <div class="flex"></div>
+        <a href="https://github.com/MajorDroolz" class="png-icon" target="_blank">
+          <img src="/res/icons/github.png" alt="GitHub" width="30" height="30">
+        </a>
+        <a href="https://www.linkedin.com/in/maximhutz/" class="png-icon" target="_blank">
+          <img src="/res/icons/linkedin.png" alt="LinkedIn" width="30" height="30">
+        </a>
+        <a href="mailto:maximhutz@gmail.com" class="nav-link white icon" data-i="mail" role="img" aria-label="Contact" target="_blank"></a>
+      </footer>
+    </div>
+
+    <dialog id="menu">
+      <div class="light width-pad shadow">
+        <section id="menu-inner">
+          <div id="menu-top">
+            <a href="/home" class="nav-link dark">MAX HUTZ</a>
+            <div class="flex"></div>
+            <form method="dialog">
+              <button class="nav-link dark icon" data-i="close" role="img" aria-label="Close"></button>
+            </form>
+          </div>
+          <a href="/experience" class="nav-link dark icon" data-i="work">Experience</a>
+          <a href="/resume" class="nav-link dark icon" data-i="clinical_notes">Resume</a>
+          <a href="mailto:maximhutz@gmail.com" class="nav-link dark icon" data-i="mail">Contact</a>
+        </section>
       </div>
-      <p id="about-me" class="scroll-opacity">
-        I’m a passionate computer science student skilled in building
-        responsive, full-stack applications. I love learning from colleagues
-        and teaching future developers. I thrive where teamwork and creativity
-        are key.
-      </p>
-      <hr class="darker scroll-opacity" id="about-hr">
-      <nav class="scroll-opacity">
-        <a href="mailto:maximhutz@gmail.com" class="nav-link blue button">maximhutz@gmail.com</a>
-        <a href="/resume" class="nav-link red button r-icon" data-i="arrow_right" target="_blank">View Resume</a>
-      </nav>
-    </section>
-    <section id="projects" class="clamp-width"></section>
+    </dialog>
   </body>
 </html>

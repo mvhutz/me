@@ -9,8 +9,8 @@
   --light: #FEFADC;
   --dark: #504B43;
   --red: #EC1B24;
-  --yellow: #F29F00;
-  --green: #62C869;
+  --yellow: #E19200;
+  --green: #4CB753;
   --blue: #2B9EB3;
 
   --timing: cubic-bezier(0.2, 1, 0, 1);
@@ -26,9 +26,10 @@
 .yellow { --color: var(--yellow) }
 .green { --color: var(--green) }
 .blue { --color: var(--blue) }
-.white { --color: var(--white) }
+.white { --color: white }
 
-.flex-space { flex: 1 }
+.flex-space, .flex { flex-grow: 1 }
+.space { flex: 1000 }
 
 /*----------------------------------------------------------------------------*/
 
