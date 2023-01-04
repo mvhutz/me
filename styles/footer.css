@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: 1024px;
+  margin: auto;
+  gap: 10px;
+}
+
+footer::before {
+  filter: brightness(0.8);
+}

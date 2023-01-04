@@ -18,6 +18,8 @@
 
   --grad: linear-gradient(45deg, #F008, #00F8);
   --shadow: 0px 10px 50px 0 #0008;
+
+  --width: 1024px;
 }
 
 .light { --color: var(--light) }
@@ -28,11 +30,38 @@
 .blue { --color: var(--blue) }
 .white { --color: white }
 
-.flex-space, .flex { flex-grow: 1 }
+.flex-space, .flex, br { flex-grow: 1 }
 .space { flex: 1000 }
 
 /*----------------------------------------------------------------------------*/
 
 html {
-  background: var(--dark);
+  background-color: var(--dark);
 }
+
+/*----------------------------------------------------------------------------*/
+
+.back {
+  position: relative;
+  padding: 10px 20px;
+  width: min(100vw, 1024px);
+  box-sizing: border-box;
+}
+
+.back::before {
+  background: var(--color);
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  z-index: -1;
+}
+
+.dark-back::before {
+  filter: brightness(0.8);
+}
+
+/*----------------------------------------------------------------------------*/

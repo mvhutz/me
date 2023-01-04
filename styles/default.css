@@ -1,24 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: min(100vw, 1024px);
+  box-sizing: border-box;
+  margin: auto;
+}
+
+/*----------------------------------------------------------------------------*/
+
 * {
-  overflow: hidden;
   text-decoration: none;
 }
 
 button {
   background-color: transparent;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100vw;
-  overflow-y: scroll;
-}
-
-html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 
 .pre {
@@ -96,6 +96,8 @@ hr {
   color: var(--color);
   position: relative;
   padding: 10px 30px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .button::before {
@@ -123,26 +125,6 @@ hr {
 
 /*----------------------------------------------------------------------------*/
 
-#header-outer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-header {
-  margin: auto;
-  max-width: 1024px;
-  display: flex;
-  gap: 40px;
-  font-size: 25px;
-  font-family: "Open Sans";
-  font-weight: bolder;
-  color: var(--dark);
-  align-items: center;
-  box-sizing: border-box;
-}
-
 #about {
   position: relative;
   margin: auto;
@@ -151,9 +133,8 @@ header {
   justify-content: center;
   align-items: flex-start;
   max-width: 1024px;
-  min-height: 90vh;
+  min-height: 85vh;
   color: var(--dark);
-  padding-top: 30px;
   box-sizing: border-box;
   gap: 30px;
 }
@@ -218,19 +199,6 @@ nav {
 
 #experience-button {
   align-self: center;
-}
-
-#footer-pad {
-  background: var(--dark) linear-gradient(#0002, #0002);
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  color: white;
-  max-width: 1024px;
-  margin: auto;
-  gap: 10px;
 }
 
 /*----------------------------------------------------------------------------*/
