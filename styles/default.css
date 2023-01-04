@@ -11,6 +11,7 @@ body {
   width: min(100vw, 1024px);
   box-sizing: border-box;
   margin: auto;
+  padding: 0 20px;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -43,6 +44,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .icon::before {
@@ -72,13 +74,22 @@ h2 {
 
 i {
   font-size: 20px;
-  font-size: "Source Serif Pro";
+  font-family: "Source Serif Pro";
 }
 
-p {
+p, section {
   font-size: 20px;
   font-family: "Open Sans";
   font-weight: 100;
+}
+
+ul {
+  list-style-type: "-   ";
+  padding-left: 2ch;
+}
+
+li {
+  padding-bottom: 20px;
 }
 
 .lighter {
@@ -99,7 +110,6 @@ hr {
   position: relative;
   padding: 10px 30px;
   font-size: 20px;
-  cursor: pointer;
 }
 
 .button::before {

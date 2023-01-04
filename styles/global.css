@@ -31,6 +31,7 @@
 .white { --color: white }
 
 .flex-space, .flex, br { flex-grow: 1 }
+.flex.dark { background-color: var(--dark); }
 .space { flex: 1000 }
 
 /*----------------------------------------------------------------------------*/
@@ -43,8 +44,8 @@ html {
 
 .back {
   position: relative;
-  padding: 10px 20px;
-  width: min(100vw, 1024px);
+  padding: 10px 0;
+  width: min(100vw, 1024px, 100%);
   box-sizing: border-box;
 }
 
