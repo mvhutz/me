@@ -1,1 +1,383 @@
-@keyframes page-enter{0%{transform:scale(.9) translateY(10%)}to{transform:scale(1) translateY(0)}}@keyframes title-enter{0%{transform:scale(2) translateY(-50%)}to{transform:scale(1) translateY(0)}}@keyframes footer-enter{0%{transform:scale(2) translateY(50%)}to{transform:scale(1) translateY(0)}}@keyframes scene-enter{0%{filter:brightness(0)}to{filter:brightness(1)}}:root{font-family:sans-serif;--timing:cubic-bezier(.2,1,0,1);--enter:2s var(--timing) 0.2s both;--blue:#3F75A2;--darkblue:#2E5476;--grey:#575757;--link-r:#D13800;--link-g:#006B00;--link-b:#006EDB}*{margin:0;padding:0;border:0}html{font-size:1vw;animation:var(--enter) scene-enter}@media print{html{font-size:.7rem}}main{display:contents}h1{font-size:3em}h2{font-size:2em}h3{font-size:1.5em}h4{font-size:1.15em}h5{font-size:.75em}ul{padding-inline-start:2em;margin:.5em 0;list-style-type:"—  "}.navbar{position:fixed;height:18em;width:100%;left:0;z-index:-1;display:flex;justify-content:center;align-items:center}nav.navbar{top:0}.resume-header{position:absolute;color:#fff;filter:opacity(.5);font:800 8em Poppins;animation:var(--enter) title-enter;user-select:none}footer.navbar{bottom:0}.resume-footer,.resume-header,article{will-change:transform,filter}.resume-footer{font:700 8em monospace;animation:var(--enter) footer-enter;user-select:none;display:flex;justify-content:space-between;width:3em}.footer-icon{text-decoration:none;opacity:.5;color:#fff;font-size:.2em;font-family:Verdana;font-weight:600;display:inline-flex;flex-direction:column;align-items:center;transition:transform .3s,opacity .3s}.footer-img{display:inline-block;font-size:4em!important;user-select:none;filter:brightness(0) invert(1);width:1em;height:1.2em;transform:scale(1)}.footer-icon:hover{opacity:1}article{background:#f5f5f5;border:2px solid #dcdcdc;padding:3em;margin:18em 16em;border-radius:1em;animation:page-enter var(--enter);box-shadow:0 2.5em 5em 0#0004,inset 1.5em 1.5em 5em 2.5em #fff}body::before{background:lightsteelblue var(--grad);width:100vw;height:100vh;content:"";display:inline-block;position:fixed;top:0;left:0;z-index:-2}.contact-details{display:flex;justify-content:space-between;font-style:normal;font-weight:700;margin-top:1em}.contact-detail{display:flex;align-items:center;white-space:nowrap}.email{color:var(--link-b)}.phone{color:var(--link-r)}.location{color:var(--link-g)}.topic-title{padding-bottom:3px;border-bottom:2px solid #6495ed;display:block}.topic{margin-top:2em;page-break-inside:avoid}.topic-icon{width:1em;height:1em;display:inline-block}.experience{margin-top:2em;margin-bottom:.5em}.skill-list>li,.title{font-weight:700;font-family:Verdana;color:var(--blue)}.title>i{font-weight:400}.date{font-style:italic}.place{font-weight:400;display:block;color:var(--grey);text-transform:uppercase}.classes-list,.skill-list{list-style:none;padding-inline-start:0}.skill-list>li{border:1px solid #dcdcdc;display:inline-flex;padding:.5em 1em;border-radius:.5em;background:#f5f5f5;font-family:monospace;white-space:nowrap;overflow:hidden;align-items:center;user-select:none;margin:.5em;box-shadow:0 .25em .25em 0#0004,inset .15em .15em .5em .25em #fff;transform:scale(1);transition:transform var(--timing) 1s}.skill-list>li img{height:1.5em}.footer-icon:hover,.skill-list>li:hover{transform:scale(1.1)}.classes-list>li::before{content:"—  "}.classes-list>li{width:calc(50% - 3ch);display:inline-block}.hflex{display:flex;justify-content:space-between;align-items:center}.icon{margin-right:.5em;width:1em;height:1em;user-select:none;display:inline-block}.freshmanuals{color:var(--darkblue)}@media print{article{margin:0;border-radius:0;border:0;padding:0;background:#fff}article,main{box-shadow:none}body,html,main{overflow:auto;background:#fff;height:auto}.skill-list>li{box-shadow:none;background-color:#fff}article *{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+/*---- Base ------------------------------------------------------------------*/
+
+:root {
+  font-family: sans-serif;
+  --timing: cubic-bezier(.2,1,0,1);
+  --enter: 2s var(--timing) 0.2s both;
+  
+  --blue: #3F75A2;
+  --darkblue: #2E5476;
+  --grey: #575757;
+
+  --link-r: #D13800;
+  --link-g: #006B00;
+  --link-b: #006EDB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: 1vw;
+  animation: var(--enter) scene-enter;
+}
+
+@media print {
+  html {
+    font-size: 0.7rem;
+  }
+}
+
+main {
+  display: contents;
+}
+
+/*---- Generic Styles --------------------------------------------------------*/
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.15em;
+}
+
+h5 {
+  font-size: 0.75em;
+}
+
+ul {
+  padding-inline-start: 2em;
+  margin: 0.5em 0;
+  list-style-type: '—  ';
+}
+
+/*---- Navbar ----------------------------------------------------------------*/
+
+.navbar {
+  position: fixed;
+  height: 18em;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.navbar {
+  top: 0;
+}
+
+.resume-header {
+  position: absolute;
+  color: white;
+  filter: opacity(0.5);
+  font: 800 8em Poppins;
+  animation: var(--enter) title-enter;
+  will-change: transform, filter;
+  user-select: none;
+}
+
+footer.navbar {
+  bottom: 0;
+}
+
+.resume-footer {
+  font: bold 8em monospace;
+  animation: var(--enter) footer-enter;
+  will-change: transform, filter;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  width: 3em;
+}
+
+.footer-icon {
+  text-decoration: none;
+  opacity: 0.5;
+  color: white;
+  font-size: 0.2em;
+  font-family: Verdana;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.footer-img {
+  display: inline-block;
+  font-size: 4em !important;
+  user-select: none;
+  filter: brightness(0) invert(1);
+  width: 1em;
+  height: 1.2em;
+  transform: scale(1);
+}
+
+.footer-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/*---- Page ------------------------------------------------------------------*/
+
+article {
+  background: whitesmoke;
+  border: 2px solid gainsboro;
+  padding: 3em;
+  margin: 18em 16em;
+  border-radius: 1em;
+  animation: page-enter var(--enter);
+  will-change: transform, filter;
+  box-shadow: 0 2.5em 5em 0 #0004,
+              inset 1.5em 1.5em 5em 2.5em white;
+}
+
+body::before {
+  background: lightsteelblue var(--grad);
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+/*---- Header ----------------------------------------------------------------*/
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.email {
+  color: var(--link-b);
+}
+
+.phone {
+  color: var(--link-r);
+}
+
+.location {
+  color: var(--link-g);
+}
+
+/*---- Sectioning ------------------------------------------------------------*/
+
+.topic-title {
+  padding-bottom: 3px;
+  border-bottom: 2px solid cornflowerblue;
+  display: block;
+}
+
+.topic {
+  margin-top: 2em;
+  page-break-inside: avoid;
+}
+
+.topic-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+/*---- Experience Title ------------------------------------------------------*/
+
+.experience {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  font-weight: bold;
+  font-family: Verdana;
+  color: var(--blue);
+}
+
+.title > i {
+  font-weight: normal;
+}
+
+.date {
+  font-style: italic;
+}
+
+.place {
+  font-weight: normal;
+  display: block;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+/*---- Skill List ------------------------------------------------------------*/
+
+.skill-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.skill-list > li {
+  border: 1px solid gainsboro;
+  display: inline-flex;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  color: var(--blue);
+  background: whitesmoke;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  align-items: center;
+  font-weight: bold;
+  user-select: none;
+  margin: 0.5em;
+  box-shadow: 0 0.25em 0.25em 0 #0004,
+              inset 0.15em 0.15em 0.5em 0.25em white;
+  transform: scale(1);
+  transition: transform var(--timing) 1s;
+}
+
+.skill-list > li img {
+  height: 1.5em;
+}
+
+.skill-list > li:hover {
+  transform: scale(1.1);
+}
+
+/*---- Classes List ----------------------------------------------------------*/
+
+.classes-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.classes-list > li::before {
+  content: '—  ';
+}
+
+.classes-list > li {
+  width: calc(50% - 3ch);
+  display: inline-block;
+}
+
+/*---- Miscellaneous ---------------------------------------------------------*/
+
+.hflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 0.5em;
+  width: 1em;
+  height: 1em;
+  user-select: none;
+  display: inline-block;
+}
+
+.freshmanuals {
+  color: var(--darkblue);
+}
+
+/*---- Animations ------------------------------------------------------------*/
+
+@keyframes page-enter {
+  from {
+    transform: scale(0.9) translateY(10%);
+  }
+
+  to {
+    transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes title-enter {
+  0% {
+    transform: scale(2) translateY(-50%);
+  }
+
+  100% {
+    transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes footer-enter {
+  0% {
+    transform: scale(2) translateY(50%);
+  }
+
+  100% {
+    transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes scene-enter {
+  from {
+    filter: brightness(0);
+  }
+  
+  to {
+    filter: brightness(1);
+  }
+}
+
+/*---- Print Styles ----------------------------------------------------------*/
+
+@media print {
+  article {
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    background: white;
+    box-shadow: none;
+  }
+
+  main {
+    overflow: auto;
+    height: auto;
+    background: white;
+    box-shadow: none;
+  }
+
+  html, body {
+    overflow: auto;
+    background: white;
+    height: auto;
+  }
+
+  .skill-list > li {
+    box-shadow: none;
+    background-color: white;
+  }
+
+  article * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
