@@ -4,22 +4,21 @@ description: This is the home page of Maxim Voldman Hutz's personal website.
 layout: default
 ---
 
+{% assign home = site.data.home %}
+{% assign work = site.data.work %}
+
 <section id="about" class="light back">
   <div class="flex"></div>
   <div class="flex"></div>
   <div>
-    <h1>Hey! 👋 <span class="pre">I'm Max Hutz.</span></h1>
-    <i>Software engineer in New York.</i>
+    <h1>{{ home.welcome }}</h1>
+    <i>{{ home.status }}</i>
   </div>
-  <p id="about-me">
-    I’m a passionate computer science student skilled in building responsive,
-    full-stack applications. I love learning from colleagues and teaching future
-    developers. I thrive where teamwork and creativity are key.
-  </p>
+  <p id="about-me">{{ home.about }}</p>
   <hr class="darker">
   <nav>
     <div id="inner-nav">
-      <a href="mailto:maximhutz@gmail.com" class="nav-link blue button flex">maximhutz@gmail.com</a>
+      <a href="mailto:{{ home.email }}" class="nav-link blue button flex">{{ home.email }}</a>
       <a href="/resume" class="nav-link red button r-icon flex" data-i="arrow_right" target="_blank">View Resume</a>
     </div>
     <div class="space"></div>
@@ -27,26 +26,19 @@ layout: default
   <div class="flex"></div>
 </section>
 
+<!-- ----------------------------------------------------------------------- -->
+
 <section id="projects" class="dark back">
   <h2>Worked on:</h2>
   <div id="project-list">
-    <a class="yellow project-item shadow" href="/experience/malung">
-      <div class="space"></div>
-      <div class="nav-link project-link r-icon" data-i="arrow_right">Malung: COVID-19 Classifier</div>
-    </a>
-    <a class="blue project-item shadow" href="/experience/freshmanual">
-      <div class="space"></div>
-      <div class="nav-link project-link r-icon" data-i="arrow_right">Freshmanual: Mobile App</div>
-    </a>
-    <a class="green project-item shadow" href="/experience/pollbuddy">
-      <div class="space"></div>
-      <div class="nav-link project-link r-icon" data-i="arrow_right">Poll Buddy</div>
-    </a>
-    <a class="red project-item shadow" href="/experience/rpi-crisis">
-      <div class="space"></div>
-      <div class="nav-link project-link r-icon" data-i="arrow_right">CRISIS</div>
-    </a>
+    {% for project in home.featured %}
+      <a class="{{ work[project].color }} project-item shadow" href="/experience/{{ project }}">
+        <div class="space"></div>
+        <div class="nav-link project-link r-icon" data-i="arrow_right">{{ work[project].title }}: {{ work[project].subtitle }}
+        </div>
+      </a>
+    {% endfor %}
   </div>
   <hr class="lighter">
-  <a href="/experience" id="experience-button" class="nav-link white button">View all experiences.</a>
+  <a href="/experiences" id="experience-button" class="nav-link white button">View all experiences.</a>
 </section>
