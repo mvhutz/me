@@ -32,7 +32,6 @@ freshmanual:
   title: FreshManual
   subtitle: Mobile App
   stack: [ html, css, js, php, docker, mariadb, azure ]
-  image: /res/avatar.svg
   link: /404
   color: blue
 
@@ -61,7 +60,6 @@ pollbuddy:
   id: pollbuddy
   title: Poll Buddy
   stack: [ html, css, js, php, docker, mariadb, azure ]
-  image: /res/avatar.svg
   link: /404
   color: green
 
@@ -90,7 +88,6 @@ rpi-crisis:
   id: rpi-crisis
   title: CRISIS
   stack: [ html, css, js, php, docker, mariadb, azure ]
-  image: /res/avatar.svg
   link: /404
   color: red
 

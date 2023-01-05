@@ -28,7 +28,6 @@ jobs:
         run: |
           find . -name "*.js" -type f -exec terser {} -c -o {} \;
           find . -name "*.css" -type f -exec csso {} -o {} \;
-          find . -name "*.html" -type f -exec html-minifier --remove-comments --collapse-whitespace {} -o {} \;
       
       - name: "Commiting changes."
         run: |

@@ -262,3 +262,25 @@ nav {
     display: none;
   }
 }
+
+.project-noimage {
+  color: #0002;
+  font-size: 40px;
+  font-family: "Open Sans";
+  font-weight: 900;
+  display: flex;
+  flex: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image-outer {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  position: absolute;
+  max-height: 100%;
+}

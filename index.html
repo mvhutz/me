@@ -31,7 +31,13 @@ layout: default
   <div id="project-list">
     {% for project in home.featured %}
       <a class="{{ work[project].color }} project-item shadow" href="/experience/{{ project }}">
-        <div class="space"></div>
+        {% if work[project].image %}
+          <div class="space project-image-outer">
+            <img src="{{work[project].image}}" alt="{{work[project].title}}" class="project-image">
+          </div>
+        {% else %}
+          <div class="project-noimage" aria-hidden="true">Image Not Available</div>
+        {% endif %}
         <div class="nav-link project-link r-icon" data-i="arrow_right">
           {{ work[project].title }}
           <!-- Add the subtitle, if it exists. -->
