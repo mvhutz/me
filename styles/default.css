@@ -192,7 +192,7 @@ nav {
 }
 
 .project-item {
-  min-width: max(40%, 300px);
+  min-width: min(max(40%, 400px), 100%);
   flex: 1;
   height: 300px;
   background-color: var(--color);
@@ -272,6 +272,9 @@ nav {
   flex: 1000;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .project-image-outer {

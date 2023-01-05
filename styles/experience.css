@@ -40,6 +40,9 @@
   color: #aaa;
   position: relative;
   text-align: center;
+  padding: 10px;
+  hyphens: manual;
+  box-sizing: border-box;
 }
 
 #description {
