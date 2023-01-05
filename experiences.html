@@ -14,7 +14,13 @@ layout: default
       {% assign data = item[1] %}
 
       <a class="{{ data.color }} project-item shadow" href="/experience/{{ id }}">
-        <div class="space"></div>
+        {% if data.image %}
+          <div class="space project-image-outer">
+            <img src="{{data.image}}" alt="{{data.title}}" class="project-image">
+          </div>
+        {% else %}
+          <div class="project-noimage" aria-hidden="true">Image Not Available</div>
+        {% endif %}
         <div class="nav-link project-link r-icon" data-i="arrow_right">
           {{ data.title }}
           <!-- Add the subtitle, if it exists. -->
