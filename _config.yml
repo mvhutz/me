@@ -1,0 +1,11 @@
+plugins:
+  - jekyll-datapage-generator
+
+page_gen:
+- data: work
+  template: experience
+  dir: experience
+  index_files: false
+  name: id
+  title: title
+  page_data_prefix: data

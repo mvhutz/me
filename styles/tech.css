@@ -1,0 +1,24 @@
+---
+---
+
+.chip {
+  font-size: 15px;
+  font-family: "Open Sans";
+  font-weight: 900;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+{% for tech in site.data.techs %}
+  {% assign id = tech[0] %}
+  {% assign data = tech[1] %}
+
+  .chip.{{id}} {
+    background-color: {{data.back}};
+    color: {{data.fore}};
+  }
+{% endfor %}

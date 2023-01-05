@@ -13,6 +13,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
 }
 
 #content {
@@ -20,14 +26,14 @@
   flex-wrap: wrap-reverse;
   align-items: flex-end;
   gap: 30px;
+  padding-bottom: 30px;
 }
 
 #image {
-  flex: 1;
   background-color: #ccc;
   border-radius: 10px;
   height: 300px;
-  min-width: min(500px, 100%);
+  width: 100%;
 }
 
 #description {
@@ -37,4 +43,28 @@
   flex-direction: column;
   align-items: flex-start;
   min-width: min(300px, 100%);
+}
+
+#image-side {
+  flex: 1;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: min(500px, 100%);
+}
+
+#stack {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+}
+
+#stack .chip {
+  flex: 1;
+}
+
+#stack::after {
+  content: "";
+  flex: 1000000;
 }

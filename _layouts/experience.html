@@ -1,0 +1,45 @@
+---
+title: Example
+layout: default
+---
+
+{% assign malung = site.data.work[page.data.id] %}
+{% assign techs = site.data.techs %}
+
+<link rel="stylesheet" href="/styles/experience.css">
+<link rel="stylesheet" href="/styles/tech.css">
+
+<section id="experience" class="dark back">
+  <section id="banner" class="{{malung.color}} back">
+    <div>
+      <h1>{{malung.title}}</h1>
+      <i>{{malung.subtitle}}</i>
+    </div>
+    <button class="nav-link dark icon" data-i="close" aria-label="Exit" type="button" onclick="history.back(-1)"></button>
+  </section>
+  <div id="content">
+    <div id="description">
+      <p>
+        {{malung.description}}
+      </p>
+      <hr class="lighter">
+      <ul>
+        {% for outcome in malung.outcomes %}
+          <li>{{outcome}}</li>
+        {% endfor %}
+      </ul>
+      <a href="/404" id="experience-button" class="nav-link white button r-icon" data-i="arrow_right">View Example</a>
+    </div>
+    <div id="image-side">
+      <div id="image" class="shadow">
+          <h1>Image Not Available</h1>
+      </div>
+      <div id="stack">
+        {% for tech in malung.stack %}
+          {% assign data = techs[tech] %}
+          <a class="chip {{tech}} shadow" href="{{data.link}}" target="_blank">{{data.name}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

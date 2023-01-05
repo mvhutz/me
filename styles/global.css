@@ -31,8 +31,9 @@
 .white { --color: white }
 
 .flex-space, .flex, br { flex-grow: 1 }
-.flex.dark { background-color: var(--dark); }
+.flex.dark { background-color: var(--dark) }
 .space { flex: 1000 }
+.npad { padding: 0 !important }
 
 /*----------------------------------------------------------------------------*/
 

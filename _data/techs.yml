@@ -1,0 +1,47 @@
+html:
+  name: HTML
+  fore: white
+  back: orangered
+  link: https://html.spec.whatwg.org/multipage/
+
+css:
+  name: CSS
+  fore: white
+  back: royalblue
+  link: https://www.w3.org/Style/CSS/Overview.en.html
+
+js:
+  name: JavaScript
+  fore: darkslategray
+  back: gold
+  link: https://en.wikipedia.org/wiki/JavaScript
+
+php:
+  name: PHP
+  fore: black
+  back: lightsteelblue
+  link: https://www.php.net
+
+docker:
+  name: Docker
+  fore: dodgerblue
+  back: white
+  link: https://www.docker.com
+
+azure:
+  name: Azure
+  fore: whitesmoke
+  back: steelblue
+  link: https://azure.microsoft.com/en-us/
+
+mariadb:
+  name: MariaDB
+  fore: black
+  back: peru
+  link: https://mariadb.org
+
+react:
+  name: React
+  fore: cyan
+  back: black
+  link: https://reactjs.org

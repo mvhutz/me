@@ -1,6 +1,6 @@
 #notfound {
   --color: var(--dark) linear-gradient(#0000, #0003);
-  flex: 1;
+  flex: 99999999999999;
   display: flex;
   justify-content: center;
   align-items: center;
