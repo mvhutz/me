@@ -39,6 +39,7 @@
   justify-content: center;
   color: #aaa;
   position: relative;
+  text-align: center;
 }
 
 #description {
@@ -66,7 +67,7 @@
 }
 
 #stack .chip {
-  flex: 1;
+  flex-grow: 1;
 }
 
 #stack::after {

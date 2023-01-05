@@ -3,7 +3,6 @@ malung:
   title: Malung
   subtitle: COVID-19 Classifier
   stack: [ html, css, js, php, docker, mariadb, azure ]
-  image: /res/avatar.svg
   link: /404
   color: yellow
 
