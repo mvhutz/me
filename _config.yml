@@ -9,3 +9,4 @@ page_gen:
   name: id
   title: title
   page_data_prefix: data
+  filter: ready

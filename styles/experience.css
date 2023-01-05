@@ -34,6 +34,11 @@
   border-radius: 10px;
   height: 300px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  position: relative;
 }
 
 #description {
@@ -67,4 +72,9 @@
 #stack::after {
   content: "";
   flex: 1000000;
+}
+
+#image-inner {
+  max-width: 100%;
+  max-height: 100%;
 }

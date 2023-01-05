@@ -28,11 +28,17 @@ layout: default
           <li>{{outcome}}</li>
         {% endfor %}
       </ul>
-      <a href="/404" id="experience-button" class="nav-link white button r-icon" data-i="arrow_right">View Example</a>
+      {% if malung.link %}
+        <a href="{{malung.link}}" id="experience-button" class="nav-link white button r-icon" data-i="arrow_right">View {{malung.title}}</a>
+      {% endif %}
     </div>
     <div id="image-side">
       <div id="image" class="shadow">
-          <h1>Image Not Available</h1>
+        {% if malung.image %}
+          <img id="image-inner" src="{{malung.image}}" alt="Image of {{malung.title}}">
+        {% else %}
+          <h1 aria-hidden>Image Not Available</h1>
+        {% endif %}
       </div>
       <div id="stack">
         {% for tech in malung.stack %}

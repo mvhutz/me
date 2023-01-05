@@ -32,7 +32,14 @@ layout: default
     {% for project in home.featured %}
       <a class="{{ work[project].color }} project-item shadow" href="/experience/{{ project }}">
         <div class="space"></div>
-        <div class="nav-link project-link r-icon" data-i="arrow_right">{{ work[project].title }}: {{ work[project].subtitle }}
+        <div class="nav-link project-link r-icon" data-i="arrow_right">
+          {{ work[project].title }}
+          <!-- Add the subtitle, if it exists. -->
+          {% if work[project].subtitle %}
+            <span>:</span>
+            &nbsp;
+            <p>{{ work[project].subtitle }}</p>
+          {% endif %}
         </div>
       </a>
     {% endfor %}

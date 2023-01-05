@@ -15,7 +15,14 @@ layout: default
 
       <a class="{{ data.color }} project-item shadow" href="/experience/{{ id }}">
         <div class="space"></div>
-        <div class="nav-link project-link r-icon" data-i="arrow_right">{{ data.title }}: {{ data.subtitle }}
+        <div class="nav-link project-link r-icon" data-i="arrow_right">
+          {{ data.title }}
+          <!-- Add the subtitle, if it exists. -->
+          {% if data.subtitle %}
+            <span>:</span>
+            &nbsp;
+            <p>{{ data.subtitle }}</p>
+          {% endif %}
         </div>
       </a>
     {% endfor %}

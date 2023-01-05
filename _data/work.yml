@@ -1,11 +1,13 @@
 malung:
   id: malung
-  title: Example
-  subtitle: Just A Test
+  title: Malung
+  subtitle: COVID-19 Classifier
   stack: [ html, css, js, php, docker, mariadb, azure ]
   image: /res/avatar.svg
-  link: /
+  link: /404
   color: yellow
+
+  ready: true
 
   description:
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -28,12 +30,14 @@ malung:
 
 freshmanual:
   id: freshmanual
-  title: Example
-  subtitle: Just A Test
+  title: FreshManual
+  subtitle: Mobile App
   stack: [ html, css, js, php, docker, mariadb, azure ]
   image: /res/avatar.svg
-  link: /
+  link: /404
   color: blue
+
+  ready: false
 
   description:
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -56,12 +60,13 @@ freshmanual:
 
 pollbuddy:
   id: pollbuddy
-  title: Example
-  subtitle: Just A Test
+  title: Poll Buddy
   stack: [ html, css, js, php, docker, mariadb, azure ]
   image: /res/avatar.svg
-  link: /
+  link: /404
   color: green
+
+  ready: false
 
   description:
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -84,12 +89,13 @@ pollbuddy:
 
 rpi-crisis:
   id: rpi-crisis
-  title: Example
-  subtitle: Just A Test
+  title: CRISIS
   stack: [ html, css, js, php, docker, mariadb, azure ]
   image: /res/avatar.svg
-  link: /
+  link: /404
   color: red
+
+  ready: false
 
   description:
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
