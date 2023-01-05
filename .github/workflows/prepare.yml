@@ -19,7 +19,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies.
-        run: npm i -g terser csso-cli html-minifier
+        run: npm i -g terser csso-cli
 
       - name: "Copying changes over to build."
         run: git checkout -b build
