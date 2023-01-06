@@ -31,6 +31,7 @@
 .white { --color: white }
 .malung { --color: #F76F8E }
 .freshmanual { --color: #3b91db }
+.pollbuddy { --color: #7f6491 }
 
 .flex-space, .flex, br { flex-grow: 1 }
 .flex.dark { background-color: var(--dark) }

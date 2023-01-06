@@ -51,28 +51,25 @@ freshmanual:
 pollbuddy:
   id: pollbuddy
   title: Poll Buddy
-  stack: [ html, css, js, php, docker, mariadb, azure ]
-  link: /404
-  color: green
+  stack: [ react, js, docker ]
+  link: https://pollbuddy.app
+  color: pollbuddy
+  image: /res/projects/pollbuddy.png
 
   ready: false
 
   description:
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book. It has survived not only five centuries, but also
-    the leap into electronic typesetting, remaining essentially unchanged.
-  
-  outcomes:
-    - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    React developer for Poll Buddy, an <b>online questionnaire service</b> used by
+    hundreds of students and teachers on the Rensselaer Polytechnic Institute
+    campus. Worked on <b>cleaning source code</b>, transitioning from legacy technology,
+    and <b>improving the site’s user experience</b>.
 
-    - Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-      
-    - It has survived not only five centuries, but also the leap into electronic
-      typesetting, remaining essentially unchanged.
+  outcomes:
+    - Cut 30% of the front-end codebase by switching to the modern, functional
+      style.
+    - Wrote and refined dozens of front-end tests using Jest for React components.
+    - Ran discount usability study on Poll Buddy’s UI, to isolate and correct
+      flaws that novel users encountered.
 
 #*----------------------------------------------------------------------------*#
 
