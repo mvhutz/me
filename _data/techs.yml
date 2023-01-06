@@ -40,8 +40,28 @@ mariadb:
   back: '#C4745C'
   link: https://mariadb.org
 
+#*----------------------------------------------------------------------------*#
+
 react:
   name: React
   fore: '#04D8F8'
   back: '#242323'
   link: https://reactjs.org
+
+swift:
+  name: Swift
+  fore: white
+  back: 'linear-gradient(-45deg, #FF3527, #FBAB3F)'
+  link: https://www.swift.org
+
+objective-c:
+  name: Objective-C
+  fore: '#000000'
+  back: '#EEEEEE'
+  link: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
+
+firebase:
+  name: Firebase
+  fore: '#F57C00'
+  back: '#EEF3F5'
+  link: https://firebase.google.com

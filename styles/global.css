@@ -30,6 +30,7 @@
 .blue { --color: var(--blue) }
 .white { --color: white }
 .malung { --color: #F76F8E }
+.freshmanual { --color: #3b91db }
 
 .flex-space, .flex, br { flex-grow: 1 }
 .flex.dark { background-color: var(--dark) }

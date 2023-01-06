@@ -28,28 +28,24 @@ freshmanual:
   id: freshmanual
   title: FreshManual
   subtitle: Mobile App
-  stack: [ html, css, js, php, docker, mariadb, azure ]
-  link: /404
-  color: blue
+  stack: [ react, js, firebase, swift, objective-c ]
+  link: https://apps.apple.com/en/app/freshmanuals/id1627091250
+  color: freshmanual
+  image: /res/projects/freshmanual.png
 
   ready: false
 
   description:
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book. It has survived not only five centuries, but also
-    the leap into electronic typesetting, remaining essentially unchanged.
-  
-  outcomes:
-    - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lead developer during the initial development of the FreshManuals app.
+    Worked with <b>team of 5</b> at Tightrope Interactive to design, build, and test
+    the <b>mobile product manual aggregator</b>.<br><br>FreshManuals is currently available
+    for download on the <b>iPhone app store</b>.
 
-    - Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-      
-    - It has survived not only five centuries, but also the leap into electronic
-      typesetting, remaining essentially unchanged.
+  outcomes:
+    - User interface built using React/React-Native, for multiplatform integration.
+    - Used Firestore/Firebase to store and access user account data.
+    - Integrated paid yahoo search results into mobile search results.
+    - Used Fetch API to request user manual data from website API endpoints.
 
 #*----------------------------------------------------------------------------*#
 
