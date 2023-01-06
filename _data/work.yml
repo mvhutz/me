@@ -3,7 +3,6 @@ malung:
   title: Malung
   subtitle: COVID-19 Classifier
   stack: [ html, css, js, php, docker, mariadb, azure ]
-  link: https://github.com/RPI-ITWS/IntroTeam18
   color: malung
   image: /res/projects/malung.png
 
@@ -29,7 +28,7 @@ freshmanual:
   title: FreshManual
   subtitle: Mobile App
   stack: [ react, js, firebase, swift, objective-c ]
-  link: https://apps.apple.com/en/app/freshmanuals/id1627091250
+  link: https://apps.apple.com/us/app/freshmanuals/id1627091250
   color: freshmanual
   image: /res/projects/freshmanual.png
 
