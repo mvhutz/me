@@ -31,7 +31,7 @@ docker:
 azure:
   name: Azure
   fore: '#EEEEEE'
-  back: '#0962B0'
+  back: 'linear-gradient(-45deg, #2892DF, #3CCBF4)'
   link: https://azure.microsoft.com/en-us/
 
 mariadb:

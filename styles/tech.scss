@@ -18,7 +18,7 @@
   {% assign data = tech[1] %}
 
   .chip.{{id}} {
-    background-color: {{data.back}};
+    background: {{data.back}};
     color: {{data.fore}};
   }
 {% endfor %}

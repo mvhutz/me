@@ -3,27 +3,24 @@ malung:
   title: Malung
   subtitle: COVID-19 Classifier
   stack: [ html, css, js, php, docker, mariadb, azure ]
-  link: /404
-  color: yellow
+  link: https://github.com/RPI-ITWS/IntroTeam18
+  color: malung
+  image: /res/projects/malung.png
 
   ready: true
 
   description:
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book. It has survived not only five centuries, but also
-    the leap into electronic typesetting, remaining essentially unchanged.
+    Led a team of 3 to create Malung, an <b>online COVID-19 classifier</b>. With
+    Malung, you can detect COVID-19 in lung scans using machine learning, and
+    <b>manage patient data on the cloud</b>. <br><br> Doubled as the <b>backend / DevOps lead</b>
+    during development, managing the site and its database.
+
   
   outcomes:
-    - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-
-    - Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-      
-    - It has survived not only five centuries, but also the leap into electronic
-      typesetting, remaining essentially unchanged.
+    - Hosted site through Microsoft Azure.
+    - Managed database with MariaDB; Containerized on Docker instance for local development.
+    - Built account system with PHP, which interfaced with frontend through backend API.
+    - Collaboratively designed site’s UI with Figma, focusing on responsive design.
 
 #*----------------------------------------------------------------------------*#
 
