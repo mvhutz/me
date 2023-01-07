@@ -4,7 +4,7 @@ malung:
   subtitle: COVID-19 Classifier
   stack: [ html, css, js, php, docker, mariadb, azure ]
   color: malung
-  image: /res/projects/malung.png
+  image: /res/projects/malung.webp
 
   ready: true
 
@@ -36,7 +36,7 @@ freshmanual:
   stack: [ react, js, firebase, swift, objective-c ]
   link: https://apps.apple.com/us/app/freshmanuals/id1627091250
   color: freshmanual
-  image: /res/projects/freshmanual.png
+  image: /res/projects/freshmanual.webp
 
   ready: false
 
@@ -64,7 +64,7 @@ pollbuddy:
   stack: [ react, js, docker ]
   link: https://pollbuddy.app
   color: pollbuddy
-  image: /res/projects/pollbuddy.png
+  image: /res/projects/pollbuddy.webp
 
   ready: false
 
@@ -92,7 +92,7 @@ rpi-crisis:
   stack: [ python, bs ]
   link: https://rpicrisis.org
   color: rpi-crisis
-  image: /res/projects/rpi-crisis.png
+  image: /res/projects/rpi-crisis.webp
 
   ready: false
 

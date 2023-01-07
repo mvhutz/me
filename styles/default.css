@@ -12,6 +12,7 @@ body {
   box-sizing: border-box;
   margin: auto;
   padding: 0 20px;
+  line-height: 1.2;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -51,12 +52,14 @@ button {
   font-family: 'Material Symbols Outlined';
   content: attr(data-i);
   font-size: 36px;
+  width: 1em;
   margin-right: 5px;
 }
 
 .r-icon::after {
   font-family: 'Material Symbols Outlined';
   content: attr(data-i);
+  width: 1em;
   margin-left: 5px;
 }
 

@@ -6,8 +6,8 @@
   {% assign malung = site.data.work[page.project_id] %}
   {% assign techs = site.data.techs %}
 
-  <link rel="stylesheet" href="/styles/experience.css">
-  <link rel="stylesheet" href="/styles/tech.css">
+  <link rel="preload stylesheet" href="/styles/experience.css">
+  <link rel="preload stylesheet" href="/styles/tech.css">
 
   <section id="experience" class="dark back">
     <section id="banner" class="{{malung.color}} back">
@@ -15,7 +15,7 @@
         <h1>{{malung.title}}</h1>
         <i>{{malung.subtitle}}</i>
       </div>
-      <button class="nav-link dark icon" data-i="close" aria-label="Exit" type="button" onclick="history.back(-1)"></button>
+      <button id="close-icon" class="nav-link dark icon" data-i="close" aria-label="Exit" type="button" onclick="history.back(-1)"></button>
     </section>
     <div id="content">
       <div id="description">
