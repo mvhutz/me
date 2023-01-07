@@ -65,3 +65,15 @@ firebase:
   fore: '#F57C00'
   back: '#EEF3F5'
   link: https://firebase.google.com
+
+python:
+  name: Python
+  fore: '#FFD94B'
+  back: '#346C94'
+  link: https://www.python.org
+
+bs:
+  name: Beautiful Soup
+  fore: '#97DACB'
+  back: '#1C4E63'
+  link: https://www.crummy.com/software/BeautifulSoup/bs4/doc/

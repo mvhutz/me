@@ -11,15 +11,21 @@ malung:
   description:
     Led a team of 3 to create Malung, an <b>online COVID-19 classifier</b>. With
     Malung, you can detect COVID-19 in lung scans using machine learning, and
-    <b>manage patient data on the cloud</b>. <br><br> Doubled as the <b>backend / DevOps lead</b>
-    during development, managing the site and its database.
+    <b>manage patient data on the cloud</b>. <br><br> Doubled as the <b>backend
+    / DevOps lead</b> during development, managing the site and its database.
 
   
   outcomes:
     - Hosted site through Microsoft Azure.
-    - Managed database with MariaDB; Containerized on Docker instance for local development.
-    - Built account system with PHP, which interfaced with frontend through backend API.
-    - Collaboratively designed site’s UI with Figma, focusing on responsive design.
+
+    - Managed database with MariaDB; Containerized on Docker instance for local
+      development.
+
+    - Built account system with PHP, which interfaced with frontend through
+      backend API.
+
+    - Collaboratively designed site’s UI with Figma, focusing on responsive
+      design.
 
 #*----------------------------------------------------------------------------*#
 
@@ -36,14 +42,18 @@ freshmanual:
 
   description:
     Lead developer during the initial development of the FreshManuals app.
-    Worked with <b>team of 5</b> at Tightrope Interactive to design, build, and test
-    the <b>mobile product manual aggregator</b>.<br><br>FreshManuals is currently available
-    for download on the <b>iPhone app store</b>.
+    Worked with <b>team of 5</b> at Tightrope Interactive to design, build, and
+    test the <b>mobile product manual aggregator</b>.<br><br>FreshManuals is
+    currently available for download on the <b>iPhone app store</b>.
 
   outcomes:
-    - User interface built using React/React-Native, for multiplatform integration.
+    - User interface built using React/React-Native, for multiplatform
+      integration.
+
     - Used Firestore/Firebase to store and access user account data.
+
     - Integrated paid yahoo search results into mobile search results.
+
     - Used Fetch API to request user manual data from website API endpoints.
 
 #*----------------------------------------------------------------------------*#
@@ -61,13 +71,16 @@ pollbuddy:
   description:
     React developer for Poll Buddy, an <b>online questionnaire service</b> used by
     hundreds of students and teachers on the Rensselaer Polytechnic Institute
-    campus. Worked on <b>cleaning source code</b>, transitioning from legacy technology,
-    and <b>improving the site’s user experience</b>.
+    campus. Worked on <b>cleaning source code</b>, transitioning from legacy
+    technology, and <b>improving the site’s user experience</b>.
 
   outcomes:
     - Cut 30% of the front-end codebase by switching to the modern, functional
       style.
-    - Wrote and refined dozens of front-end tests using Jest for React components.
+
+    - Wrote and refined dozens of front-end tests using Jest for React
+      components.
+
     - Ran discount usability study on Poll Buddy’s UI, to isolate and correct
       flaws that novel users encountered.
 
@@ -76,27 +89,28 @@ pollbuddy:
 rpi-crisis:
   id: rpi-crisis
   title: CRISIS
-  stack: [ html, css, js, php, docker, mariadb, azure ]
-  link: /404
-  color: red
+  stack: [ python, bs ]
+  link: https://rpicrisis.org
+  color: rpi-crisis
+  image: /res/projects/rpi-crisis.png
 
   ready: false
 
   description:
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book. It has survived not only five centuries, but also
-    the leap into electronic typesetting, remaining essentially unchanged.
-  
-  outcomes:
-    - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    <b>Backend developer</b> for Correcting Rensselaer’s Insufferable Student
+    Information System (CRISIS), a web-app to help students organize and <b>manage
+    their curriculum</b> at Rensselaer Polytechnic Institute (RPI). Worked to
+    <b>expand data collection</b> system, and decipher information from RPI’s
+    legacy SIS.
 
-    - Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-      
-    - It has survived not only five centuries, but also the leap into electronic
-      typesetting, remaining essentially unchanged.
+  outcomes:
+    - Wrote web-scrapers using Beautiful Soup to pull data from QuACS, another
+      well-known course scheduler, jump-starting the site’s backend.
+
+    - Wrote web-scrapers to extract course templates from RPI’s numerous
+      major-specific websites.
+
+    - Used Lark to parse course requirements from RPI’s convoluted course
+      catalog.
 
 #*----------------------------------------------------------------------------*#
