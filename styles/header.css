@@ -1,13 +1,1 @@
-header {
-  position: sticky !important;
-  top: 0;
-  z-index: 10000;
-
-  display: flex;
-  gap: 40px;
-  font-size: 25px;
-  font-family: "Open Sans";
-  font-weight: bolder;
-  color: var(--dark);
-  align-items: center;
-}
+header{position:sticky!important;top:0;z-index:10000;display:flex;gap:40px;font-size:25px;font-family:"Open Sans";font-weight:bolder;color:var(--dark);align-items:center}
